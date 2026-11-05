@@ -1,0 +1,131 @@
+
+build/fibonacci_matrix.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+fibonacci_matrix.c:
+File name                        Line number    Starting address    View    Stmt
+fibonacci_matrix.c                        15                0x28               x
+fibonacci_matrix.c                        16                0x28       1       x
+fibonacci_matrix.c                        17                0x28       2       x
+fibonacci_matrix.c                        18                0x28       3       x
+fibonacci_matrix.c                        19                0x28       4       x
+fibonacci_matrix.c                        19                0x28       5       x
+fibonacci_matrix.c                        15                0x28       6
+fibonacci_matrix.c                        17                0x30       7
+fibonacci_matrix.c                        15                0x34       8
+fibonacci_matrix.c                        17                0x5c       9
+fibonacci_matrix.c                        16                0x60      10
+fibonacci_matrix.c                        15                0x68      11
+fibonacci_matrix.c                        17                0x6c      12
+fibonacci_matrix.c                        16                0x70      13
+fibonacci_matrix.c                        18                0x78      14
+fibonacci_matrix.c                        20                0x7c      15       x
+fibonacci_matrix.c                        20                0x7c      16
+fibonacci_matrix.c                        20                0x80      17
+fibonacci_matrix.c                        21                0x84      18       x
+fibonacci_matrix.c                         8                0x84      19       x
+fibonacci_matrix.c                         8                0x84      20
+fibonacci_matrix.c                         8                0x94      21
+fibonacci_matrix.c                         9                0xa4      22
+fibonacci_matrix.c                         8                0xac      23
+fibonacci_matrix.c                         9                0xb0      24       x
+fibonacci_matrix.c                         9                0xb0      25
+fibonacci_matrix.c                        11                0xb4      26
+fibonacci_matrix.c                         9                0xb8      27
+fibonacci_matrix.c                        11                0xbc      28
+fibonacci_matrix.c                        10                0xc0      29       x
+fibonacci_matrix.c                        11                0xc0      30       x
+fibonacci_matrix.c                        11                0xc0      31
+fibonacci_matrix.c                        19                0xc4      32
+fibonacci_matrix.c                        22                0xc8      33
+fibonacci_matrix.c                        11                0xcc      34
+fibonacci_matrix.c                        12                0xd0      35       x
+fibonacci_matrix.c                        12                0xd0      36       x
+fibonacci_matrix.c                        12                0xd0      37       x
+fibonacci_matrix.c                        12                0xd0      38       x
+fibonacci_matrix.c                        22                0xd0      39       x
+fibonacci_matrix.c                        19                0xd0      40       x
+fibonacci_matrix.c                        24                0xd4      41       x
+fibonacci_matrix.c                        24                0xd4      42       x
+fibonacci_matrix.c                        26                0xd4      43
+fibonacci_matrix.c                        24                0xdc      44
+fibonacci_matrix.c                        24                0xe4      45       x
+fibonacci_matrix.c                        24                0xe4      46       x
+fibonacci_matrix.c                        24                0xe4      47       x
+fibonacci_matrix.c                        24                0xe4      48
+fibonacci_matrix.c                        24                0xe8      49       x
+fibonacci_matrix.c                        24                0xe8      50       x
+fibonacci_matrix.c                        24                0xe8      51       x
+fibonacci_matrix.c                        24                0xe8      52
+fibonacci_matrix.c                        24                0xec      53       x
+fibonacci_matrix.c                        24                0xec      54       x
+fibonacci_matrix.c                        24                0xec      55       x
+fibonacci_matrix.c                        24                0xec      56
+fibonacci_matrix.c                        24                0xf0      57       x
+fibonacci_matrix.c                        24                0xf0      58       x
+fibonacci_matrix.c                        25                0xf0      59       x
+fibonacci_matrix.c                        26                0xf0      60
+fibonacci_matrix.c                        20               0x120      61       x
+fibonacci_matrix.c                         8               0x120      62       x
+fibonacci_matrix.c                         8               0x120      63
+fibonacci_matrix.c                         8               0x12c      64
+fibonacci_matrix.c                         8               0x130      65
+fibonacci_matrix.c                         8               0x134      66
+fibonacci_matrix.c                         9               0x140      67
+fibonacci_matrix.c                         8               0x148      68
+fibonacci_matrix.c                         9               0x14c      69       x
+fibonacci_matrix.c                         9               0x14c      70
+fibonacci_matrix.c                         9               0x150      71
+fibonacci_matrix.c                         9               0x154      72
+fibonacci_matrix.c                         9               0x158      73
+fibonacci_matrix.c                        10               0x164      74
+fibonacci_matrix.c                         9               0x16c      75
+fibonacci_matrix.c                        10               0x170      76       x
+fibonacci_matrix.c                        10               0x170      77
+fibonacci_matrix.c                        10               0x174      78
+fibonacci_matrix.c                        10               0x178      79
+fibonacci_matrix.c                        10               0x17c      80
+fibonacci_matrix.c                        11               0x188      81
+fibonacci_matrix.c                        10               0x190      82
+fibonacci_matrix.c                        11               0x194      83       x
+fibonacci_matrix.c                        11               0x194      84
+fibonacci_matrix.c                        11               0x19c      85
+fibonacci_matrix.c                        12               0x1a8      86
+fibonacci_matrix.c                        11               0x1ac      87
+fibonacci_matrix.c                        12               0x1b0      88       x
+fibonacci_matrix.c                        12               0x1b0      89       x
+fibonacci_matrix.c                        12               0x1b0      90       x
+fibonacci_matrix.c                        12               0x1b0      91       x
+fibonacci_matrix.c                        12               0x1b0      92
+fibonacci_matrix.c                         -               0x1b8
+
+
+muldi3.S:
+File name                        Line number    Starting address    View    Stmt
+muldi3.S                                  37               0x1b8               x
+muldi3.S                                  38               0x1bc       1       x
+muldi3.S                                  40               0x1c0       2       x
+muldi3.S                                  41               0x1c4       3       x
+muldi3.S                                  42               0x1c8       4       x
+muldi3.S                                  44               0x1cc       5       x
+muldi3.S                                  45               0x1d0       6       x
+muldi3.S                                  46               0x1d4       7       x
+muldi3.S                                  47               0x1d8       8       x
+muldi3.S                                   -               0x1dc
+
+

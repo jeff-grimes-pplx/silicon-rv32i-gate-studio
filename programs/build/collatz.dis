@@ -1,0 +1,52 @@
+
+build/collatz.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	0ac00293          	li	t0,172
+   c:	24400313          	li	t1,580
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	23c02303          	lw	t1,572(zero) # 23c <best_steps>
+  2c:	0ac00893          	li	a7,172
+  30:	0008a223          	sw	zero,4(a7)
+  34:	00200813          	li	a6,2
+  38:	00888893          	addi	a7,a7,8
+  3c:	00000e93          	li	t4,0
+  40:	00100593          	li	a1,1
+  44:	06400e13          	li	t3,100
+  48:	00080793          	mv	a5,a6
+  4c:	00000693          	li	a3,0
+  50:	00179713          	slli	a4,a5,0x1
+  54:	0017f613          	andi	a2,a5,1
+  58:	00f70733          	add	a4,a4,a5
+  5c:	00060663          	beqz	a2,68 <main+0x40>
+  60:	00170793          	addi	a5,a4,1
+  64:	00168693          	addi	a3,a3,1
+  68:	0017d793          	srli	a5,a5,0x1
+  6c:	00168693          	addi	a3,a3,1
+  70:	feb790e3          	bne	a5,a1,50 <main+0x28>
+  74:	00d8a023          	sw	a3,0(a7)
+  78:	00d37863          	bgeu	t1,a3,88 <main+0x60>
+  7c:	00068313          	mv	t1,a3
+  80:	00080513          	mv	a0,a6
+  84:	00058e93          	mv	t4,a1
+  88:	00180813          	addi	a6,a6,1
+  8c:	00488893          	addi	a7,a7,4
+  90:	fbc81ce3          	bne	a6,t3,48 <main+0x20>
+  94:	000e8863          	beqz	t4,a4 <main+0x7c>
+  98:	22602e23          	sw	t1,572(zero) # 23c <best_steps>
+  9c:	24a02023          	sw	a0,576(zero) # 240 <best_start>
+  a0:	00008067          	ret
+  a4:	24002503          	lw	a0,576(zero) # 240 <best_start>
+  a8:	00008067          	ret

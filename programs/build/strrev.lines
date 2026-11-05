@@ -1,0 +1,52 @@
+
+build/strrev.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+strrev.c:
+File name                        Line number    Starting address    View    Stmt
+strrev.c                                   4                0x28               x
+strrev.c                                   5                0x28       1       x
+strrev.c                                   6                0x28       2       x
+strrev.c                                   6                0x28       3       x
+strrev.c                                   6                0x28       4
+strrev.c                                   6                0x2c       5
+strrev.c                                   5                0x38       6
+strrev.c                                   6                0x3c       7       x
+strrev.c                                   6                0x3c       8
+strrev.c                                   6                0x48       9
+strrev.c                                   6                0x4c      10       x
+strrev.c                                   7                0x50      11       x
+strrev.c                                   7                0x50      12       x
+strrev.c                                   7                0x50      13       x
+strrev.c                                   7                0x58      14
+strrev.c                                   8                0x5c      15       x
+strrev.c                                   8                0x5c      16
+strrev.c                                   8                0x60      17
+strrev.c                                   8                0x64      18       x
+strrev.c                                   7                0x64      19
+strrev.c                                   8                0x68      20
+strrev.c                                   8                0x6c      21       x
+strrev.c                                   8                0x6c      22
+strrev.c                                   7                0x70      23       x
+strrev.c                                   7                0x70      24       x
+strrev.c                                   5                0x84      25
+strrev.c                                  10                0x88      26       x
+strrev.c                                  11                0x88      27
+strrev.c                                   -                0x8c
+
+

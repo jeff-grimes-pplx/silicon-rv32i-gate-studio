@@ -1,0 +1,6 @@
+00000000 T _start
+00000020 t square
+00000098 B __bss_end
+00000098 B __bss_start
+00000098 d stack_top
+00010000 B __stack_top

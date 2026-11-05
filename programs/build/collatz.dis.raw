@@ -1,0 +1,52 @@
+
+build/collatz.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,172
+   c:	addi	x6,x0,580
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	lw	x6,572(x0) # 23c <best_steps>
+  2c:	addi	x17,x0,172
+  30:	sw	x0,4(x17)
+  34:	addi	x16,x0,2
+  38:	addi	x17,x17,8
+  3c:	addi	x29,x0,0
+  40:	addi	x11,x0,1
+  44:	addi	x28,x0,100
+  48:	addi	x15,x16,0
+  4c:	addi	x13,x0,0
+  50:	slli	x14,x15,0x1
+  54:	andi	x12,x15,1
+  58:	add	x14,x14,x15
+  5c:	beq	x12,x0,68 <main+0x40>
+  60:	addi	x15,x14,1
+  64:	addi	x13,x13,1
+  68:	srli	x15,x15,0x1
+  6c:	addi	x13,x13,1
+  70:	bne	x15,x11,50 <main+0x28>
+  74:	sw	x13,0(x17)
+  78:	bgeu	x6,x13,88 <main+0x60>
+  7c:	addi	x6,x13,0
+  80:	addi	x10,x16,0
+  84:	addi	x29,x11,0
+  88:	addi	x16,x16,1
+  8c:	addi	x17,x17,4
+  90:	bne	x16,x28,48 <main+0x20>
+  94:	beq	x29,x0,a4 <main+0x7c>
+  98:	sw	x6,572(x0) # 23c <best_steps>
+  9c:	sw	x10,576(x0) # 240 <best_start>
+  a0:	jalr	x0,0(x1)
+  a4:	lw	x10,576(x0) # 240 <best_start>
+  a8:	jalr	x0,0(x1)

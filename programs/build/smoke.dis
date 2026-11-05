@@ -1,0 +1,27 @@
+
+build/smoke.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00700593          	li	a1,7
+   4:	00500613          	li	a2,5
+   8:	00c586b3          	add	a3,a1,a2
+   c:	00d68733          	add	a4,a3,a3
+  10:	40b707b3          	sub	a5,a4,a1
+  14:	04000293          	li	t0,64
+  18:	00f2a023          	sw	a5,0(t0)
+  1c:	0002a803          	lw	a6,0(t0)
+  20:	00180513          	addi	a0,a6,1
+  24:	00f50863          	beq	a0,a5,34 <fail>
+  28:	00f51463          	bne	a0,a5,30 <ok>
+  2c:	06300513          	li	a0,99
+
+00000030 <ok>:
+  30:	00100073          	ebreak
+
+00000034 <fail>:
+  34:	00001537          	lui	a0,0x1
+  38:	bad50513          	addi	a0,a0,-1107 # bad <__bss_end+0xb69>
+  3c:	00100073          	ebreak

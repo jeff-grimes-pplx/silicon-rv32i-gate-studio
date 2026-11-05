@@ -1,0 +1,6 @@
+00000000 T _start
+00000028 T main
+00000064 D data
+000000a4 B __bss_end
+000000a4 B __bss_start
+00010000 B __stack_top

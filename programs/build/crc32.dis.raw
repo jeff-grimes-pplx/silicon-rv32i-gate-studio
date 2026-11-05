@@ -1,0 +1,39 @@
+
+build/crc32.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,156
+   c:	addi	x6,x0,160
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	lui	x12,0xedb88
+  2c:	addi	x11,x0,120
+  30:	addi	x12,x12,800 # edb88320 <__stack_top+0xedb78320>
+  34:	addi	x14,x0,-1
+  38:	addi	x15,x0,83
+  3c:	xor	x14,x14,x15
+  40:	addi	x13,x0,8
+  44:	andi	x15,x14,1
+  48:	sub	x15,x0,x15
+  4c:	and	x15,x15,x12
+  50:	srli	x14,x14,0x1
+  54:	addi	x13,x13,-1
+  58:	xor	x14,x14,x15
+  5c:	bne	x13,x0,44 <main+0x1c>
+  60:	lbu	x15,1(x11)
+  64:	addi	x11,x11,1
+  68:	bne	x15,x0,3c <main+0x14>
+  6c:	xori	x10,x14,-1
+  70:	sw	x10,156(x0) # 9c <checksum>
+  74:	jalr	x0,0(x1)

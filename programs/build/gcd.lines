@@ -1,0 +1,87 @@
+
+build/gcd.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+gcd.c:
+File name                        Line number    Starting address    View    Stmt
+gcd.c                                     22                0x28               x
+gcd.c                                     23                0x28       1       x
+gcd.c                                     23                0x28       2       x
+gcd.c                                     23                0x28       3       x
+gcd.c                                     23                0x34       4       x
+gcd.c                                     23                0x34       5
+gcd.c                                      9                0x3c       6       x
+gcd.c                                      9                0x3c       7
+gcd.c                                     10                0x40       8       x
+gcd.c                                     10                0x40       9
+gcd.c                                     12                0x44      10       x
+gcd.c                                     12                0x44      11
+gcd.c                                     12                0x48      12
+gcd.c                                     11                0x4c      13
+gcd.c                                     12                0x50      14
+gcd.c                                     12                0x54      15       x
+gcd.c                                     12                0x54      16
+gcd.c                                     12                0x58      17       x
+gcd.c                                     12                0x58      18
+gcd.c                                     12                0x5c      19       x
+gcd.c                                     12                0x5c      20
+gcd.c                                     12                0x60      21
+gcd.c                                     12                0x64      22
+gcd.c                                     12                0x68      23       x
+gcd.c                                     13                0x6c      24       x
+gcd.c                                     13                0x6c      25
+gcd.c                                     13                0x70      26
+gcd.c                                     13                0x74      27       x
+gcd.c                                     13                0x74      28
+gcd.c                                     13                0x78      29       x
+gcd.c                                     13                0x78      30
+gcd.c                                     13                0x7c      31
+gcd.c                                     16                0x84      32       x
+gcd.c                                     16                0x84      33
+gcd.c                                     17                0x88      34       x
+gcd.c                                     17                0x88      35
+gcd.c                                     14                0x8c      36       x
+gcd.c                                     15                0x94      37       x
+gcd.c                                     15                0x94      38
+gcd.c                                     15                0x98      39       x
+gcd.c                                     15                0x98      40
+gcd.c                                     15                0x9c      41
+gcd.c                                     17                0xa4      42       x
+gcd.c                                     17                0xa4      43
+gcd.c                                     14                0xa8      44       x
+gcd.c                                     16                0xa8      45
+gcd.c                                     17                0xac      46
+gcd.c                                     19                0xb4      47       x
+gcd.c                                     19                0xb4      48
+gcd.c                                     23                0xb8      49
+gcd.c                                     23                0xbc      50       x
+gcd.c                                     23                0xbc      51       x
+gcd.c                                     24                0xc4      52       x
+gcd.c                                     25                0xc4      53
+gcd.c                                     10                0xcc      54
+gcd.c                                     23                0xd0      55
+gcd.c                                     23                0xd4      56       x
+gcd.c                                     23                0xd4      57       x
+gcd.c                                     13                0xe0      58       x
+gcd.c                                     13                0xe0      59
+gcd.c                                     13                0xe4      60
+gcd.c                                     13                0xe8      61       x
+gcd.c                                     13                0xe8      62
+gcd.c                                      -                0xf0
+
+

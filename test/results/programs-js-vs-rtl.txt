@@ -1,0 +1,18 @@
+branches: OK trace 57 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=56 rtl=56, instret js=34 rtl=34
+bsearch: OK trace 378 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=377 rtl=377, instret js=295 rtl=295
+bubble: OK trace 1327 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=1326 rtl=1326, instret js=842 rtl=842
+calls: OK trace 99 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=98 rtl=98, instret js=66 rtl=66
+collatz: OK trace 24842 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=24841 rtl=24841, instret js=17975 rtl=17975
+crc32: OK trace 2571 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=2570 rtl=2570, instret js=2032 rtl=2032
+fib: OK trace 457 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=456 rtl=456, instret js=324 rtl=324
+gcd: OK trace 865 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=864 rtl=864, instret js=554 rtl=554
+hazards: OK trace 24 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=23 rtl=23, instret js=16 rtl=16
+mandel: OK trace 60000 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=2288139 rtl=2288139, instret js=1605069 rtl=1605069
+matmul: OK trace 1076 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=1075 rtl=1075, instret js=749 rtl=749
+memcopy: OK trace 189 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=188 rtl=188, instret js=128 rtl=128
+multiply: OK trace 84 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=83 rtl=83, instret js=53 rtl=53
+primes: OK trace 16701 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=16700 rtl=16700, instret js=11451 rtl=11451
+smoke: OK trace 20 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=19 rtl=19, instret js=12 rtl=12
+strrev: OK trace 331 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=330 rtl=330, instret js=249 rtl=249
+sum: OK trace 128 lines (0 mism), regs 0 mism, mem 0 mism, cycles js=127 rtl=127, instret js=87 rtl=87
+OK count: 17

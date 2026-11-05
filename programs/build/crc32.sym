@@ -1,0 +1,7 @@
+00000000 T _start
+00000028 T main
+00000078 R message
+0000009c B __bss_start
+0000009c B checksum
+000000a0 B __bss_end
+00010000 B __stack_top

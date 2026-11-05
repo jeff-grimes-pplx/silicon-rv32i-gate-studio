@@ -1,0 +1,16 @@
+
+build/branches.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	addi	x10,x0,0
+   4:	addi	x11,x0,0
+   8:	addi	x12,x0,10
+
+0000000c <loop>:
+   c:	addi	x11,x11,1
+  10:	add	x10,x10,x11
+  14:	blt	x11,x12,c <loop>
+  18:	ebreak

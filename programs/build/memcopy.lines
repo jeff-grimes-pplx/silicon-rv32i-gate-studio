@@ -1,0 +1,30 @@
+
+build/memcopy.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+memcopy.S:
+File name                        Line number    Starting address    View    Stmt
+memcopy.S                                  7                   0               x
+memcopy.S                                  8                 0x4       1       x
+memcopy.S                                  9                 0x8       2       x
+memcopy.S                                 11                 0xc       3       x
+memcopy.S                                 12                0x10       4       x
+memcopy.S                                 13                0x14       5       x
+memcopy.S                                 14                0x18       6       x
+memcopy.S                                 15                0x1c       7       x
+memcopy.S                                 16                0x20       8       x
+memcopy.S                                 18                0x24       9       x
+memcopy.S                                 19                0x28      10       x
+memcopy.S                                 20                0x2c      11       x
+memcopy.S                                 22                0x30      12       x
+memcopy.S                                 23                0x34      13       x
+memcopy.S                                 24                0x38      14       x
+memcopy.S                                 25                0x3c      15       x
+memcopy.S                                 26                0x40      16       x
+memcopy.S                                 27                0x44      17       x
+memcopy.S                                 28                0x48      18       x
+memcopy.S                                 29                0x4c      19       x
+memcopy.S                                  -                0x50
+
+

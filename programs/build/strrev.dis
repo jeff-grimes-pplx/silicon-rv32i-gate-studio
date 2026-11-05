@@ -1,0 +1,44 @@
+
+build/strrev.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	0a800293          	li	t0,168
+   c:	0a800313          	li	t1,168
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	08c00793          	li	a5,140
+  2c:	0007c703          	lbu	a4,0(a5)
+  30:	04070a63          	beqz	a4,84 <main+0x5c>
+  34:	00178713          	addi	a4,a5,1
+  38:	00000513          	li	a0,0
+  3c:	00074683          	lbu	a3,0(a4)
+  40:	00170713          	addi	a4,a4,1
+  44:	00050613          	mv	a2,a0
+  48:	00150513          	addi	a0,a0,1
+  4c:	fe0698e3          	bnez	a3,3c <main+0x14>
+  50:	02060c63          	beqz	a2,88 <main+0x60>
+  54:	00c786b3          	add	a3,a5,a2
+  58:	00000713          	li	a4,0
+  5c:	0006c803          	lbu	a6,0(a3)
+  60:	0007c583          	lbu	a1,0(a5)
+  64:	00170713          	addi	a4,a4,1
+  68:	01078023          	sb	a6,0(a5)
+  6c:	00b68023          	sb	a1,0(a3)
+  70:	40e605b3          	sub	a1,a2,a4
+  74:	00178793          	addi	a5,a5,1
+  78:	fff68693          	addi	a3,a3,-1
+  7c:	feb740e3          	blt	a4,a1,5c <main+0x34>
+  80:	00008067          	ret
+  84:	00000513          	li	a0,0
+  88:	00008067          	ret

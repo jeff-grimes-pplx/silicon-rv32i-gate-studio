@@ -1,0 +1,2 @@
+assembler negative tests: 23/23 passed
+exit 0

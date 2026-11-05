@@ -1,0 +1,31 @@
+
+build/memcopy.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	addi	x5,x0,80
+   4:	addi	x6,x0,96
+   8:	addi	x7,x0,16
+
+0000000c <bytes>:
+   c:	lbu	x28,0(x5)
+  10:	sb	x28,0(x6)
+  14:	addi	x5,x5,1
+  18:	addi	x6,x6,1
+  1c:	addi	x7,x7,-1
+  20:	bne	x7,x0,c <bytes>
+  24:	addi	x5,x0,80
+  28:	addi	x6,x0,112
+  2c:	addi	x7,x0,4
+
+00000030 <words>:
+  30:	lw	x28,0(x5)
+  34:	sw	x28,0(x6)
+  38:	addi	x5,x5,4
+  3c:	addi	x6,x6,4
+  40:	addi	x7,x7,-1
+  44:	bne	x7,x0,30 <words>
+  48:	addi	x10,x0,32
+  4c:	ebreak

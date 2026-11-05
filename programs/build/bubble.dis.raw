@@ -1,0 +1,34 @@
+
+build/bubble.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,164
+   c:	addi	x6,x0,164
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x11,x0,100
+  2c:	addi	x12,x11,60
+  30:	addi	x10,x0,0
+  34:	addi	x15,x11,0
+  38:	lw	x14,0(x15)
+  3c:	lw	x13,4(x15)
+  40:	bgeu	x13,x14,50 <main+0x28>
+  44:	sw	x13,0(x15)
+  48:	sw	x14,4(x15)
+  4c:	addi	x10,x10,1
+  50:	addi	x15,x15,4
+  54:	bne	x12,x15,38 <main+0x10>
+  58:	addi	x12,x12,-4
+  5c:	bne	x12,x11,34 <main+0xc>
+  60:	jalr	x0,0(x1)

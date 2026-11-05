@@ -1,0 +1,183 @@
+
+build/mandel.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,668
+   c:	addi	x6,x0,1160
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x2,x2,-80
+  2c:	addi	x15,x0,668
+  30:	sw	x21,52(x2)
+  34:	sw	x22,48(x2)
+  38:	sw	x27,28(x2)
+  3c:	sw	x1,76(x2)
+  40:	sw	x8,72(x2)
+  44:	sw	x9,68(x2)
+  48:	sw	x18,64(x2)
+  4c:	sw	x19,60(x2)
+  50:	sw	x20,56(x2)
+  54:	sw	x23,44(x2)
+  58:	sw	x24,40(x2)
+  5c:	sw	x25,36(x2)
+  60:	sw	x26,32(x2)
+  64:	sw	x15,8(x2)
+  68:	sw	x0,12(x2)
+  6c:	sw	x0,4(x2)
+  70:	lui	x27,0xffffe
+  74:	addi	x21,x0,18
+  78:	lui	x22,0x4
+  7c:	lw	x10,12(x2)
+  80:	addi	x11,x0,12
+  84:	addi	x23,x0,0
+  88:	jal	x1,1dc <__divsi3>
+  8c:	lw	x24,8(x2)
+  90:	lui	x15,0xfffff
+  94:	add	x20,x10,x15
+  98:	addi	x11,x0,40
+  9c:	addi	x10,x23,0
+  a0:	jal	x1,1dc <__divsi3>
+  a4:	add	x19,x10,x27
+  a8:	addi	x26,x0,0
+  ac:	addi	x9,x0,0
+  b0:	addi	x18,x0,0
+  b4:	addi	x8,x0,0
+  b8:	addi	x25,x0,0
+  bc:	jal	x0,e4 <main+0xbc>
+  c0:	jal	x1,1b8 <__mulsi3>
+  c4:	addi	x9,x10,0
+  c8:	addi	x11,x8,0
+  cc:	addi	x10,x8,0
+  d0:	jal	x1,1b8 <__mulsi3>
+  d4:	srai	x9,x9,0xc
+  d8:	srai	x26,x10,0xc
+  dc:	add	x13,x9,x26
+  e0:	blt	x22,x13,1a4 <main+0x17c>
+  e4:	addi	x11,x8,0
+  e8:	addi	x10,x25,0
+  ec:	jal	x1,1b8 <__mulsi3>
+  f0:	slli	x8,x10,0x1
+  f4:	sub	x15,x9,x26
+  f8:	add	x25,x15,x19
+  fc:	srai	x8,x8,0xc
+ 100:	addi	x18,x18,1
+ 104:	addi	x11,x25,0
+ 108:	addi	x10,x25,0
+ 10c:	add	x8,x8,x20
+ 110:	bne	x18,x21,c0 <main+0x98>
+ 114:	lw	x15,4(x2)
+ 118:	addi	x15,x15,1 # fffff001 <__stack_top+0xfffef001>
+ 11c:	sw	x15,4(x2)
+ 120:	addi	x15,x0,64
+ 124:	sb	x15,0(x24)
+ 128:	lui	x15,0x3
+ 12c:	add	x23,x23,x15
+ 130:	lui	x15,0x78
+ 134:	addi	x24,x24,1
+ 138:	bne	x23,x15,98 <main+0x70>
+ 13c:	lw	x14,12(x2)
+ 140:	lw	x15,8(x2)
+ 144:	lui	x13,0x2
+ 148:	add	x14,x14,x13
+ 14c:	sb	x0,40(x15) # 78028 <__stack_top+0x68028>
+ 150:	sw	x14,12(x2)
+ 154:	addi	x15,x15,41
+ 158:	sw	x15,8(x2)
+ 15c:	addi	x14,x0,1160
+ 160:	bne	x15,x14,7c <main+0x54>
+ 164:	lw	x1,76(x2)
+ 168:	lw	x8,72(x2)
+ 16c:	lw	x10,4(x2)
+ 170:	lw	x9,68(x2)
+ 174:	lw	x18,64(x2)
+ 178:	lw	x19,60(x2)
+ 17c:	lw	x20,56(x2)
+ 180:	lw	x21,52(x2)
+ 184:	lw	x22,48(x2)
+ 188:	lw	x23,44(x2)
+ 18c:	lw	x24,40(x2)
+ 190:	lw	x25,36(x2)
+ 194:	lw	x26,32(x2)
+ 198:	lw	x27,28(x2)
+ 19c:	addi	x2,x2,80
+ 1a0:	jalr	x0,0(x1)
+ 1a4:	srai	x18,x18,0x1
+ 1a8:	addi	x15,x0,656
+ 1ac:	add	x15,x15,x18
+ 1b0:	lbu	x15,0(x15)
+ 1b4:	jal	x0,124 <main+0xfc>
+
+000001b8 <__mulsi3>:
+ 1b8:	addi	x12,x10,0
+ 1bc:	addi	x10,x0,0
+ 1c0:	andi	x13,x11,1
+ 1c4:	beq	x13,x0,1cc <__mulsi3+0x14>
+ 1c8:	add	x10,x10,x12
+ 1cc:	srli	x11,x11,0x1
+ 1d0:	slli	x12,x12,0x1
+ 1d4:	bne	x11,x0,1c0 <__mulsi3+0x8>
+ 1d8:	jalr	x0,0(x1)
+
+000001dc <__divsi3>:
+ 1dc:	blt	x10,x0,23c <__umodsi3+0x10>
+ 1e0:	blt	x11,x0,24c <__umodsi3+0x20>
+
+000001e4 <__hidden___udivsi3>:
+ 1e4:	addi	x12,x11,0
+ 1e8:	addi	x11,x10,0
+ 1ec:	addi	x10,x0,-1
+ 1f0:	beq	x12,x0,228 <__hidden___udivsi3+0x44>
+ 1f4:	addi	x13,x0,1
+ 1f8:	bgeu	x12,x11,20c <__hidden___udivsi3+0x28>
+ 1fc:	bge	x0,x12,20c <__hidden___udivsi3+0x28>
+ 200:	slli	x12,x12,0x1
+ 204:	slli	x13,x13,0x1
+ 208:	bltu	x12,x11,1fc <__hidden___udivsi3+0x18>
+ 20c:	addi	x10,x0,0
+ 210:	bltu	x11,x12,21c <__hidden___udivsi3+0x38>
+ 214:	sub	x11,x11,x12
+ 218:	or	x10,x10,x13
+ 21c:	srli	x13,x13,0x1
+ 220:	srli	x12,x12,0x1
+ 224:	bne	x13,x0,210 <__hidden___udivsi3+0x2c>
+ 228:	jalr	x0,0(x1)
+
+0000022c <__umodsi3>:
+ 22c:	addi	x5,x1,0
+ 230:	jal	x1,1e4 <__hidden___udivsi3>
+ 234:	addi	x10,x11,0
+ 238:	jalr	x0,0(x5)
+ 23c:	sub	x10,x0,x10
+ 240:	blt	x0,x11,250 <__umodsi3+0x24>
+ 244:	sub	x11,x0,x11
+ 248:	jal	x0,1e4 <__hidden___udivsi3>
+ 24c:	sub	x11,x0,x11
+ 250:	addi	x5,x1,0
+ 254:	jal	x1,1e4 <__hidden___udivsi3>
+ 258:	sub	x10,x0,x10
+ 25c:	jalr	x0,0(x5)
+
+00000260 <__modsi3>:
+ 260:	addi	x5,x1,0
+ 264:	blt	x11,x0,278 <__modsi3+0x18>
+ 268:	blt	x10,x0,280 <__modsi3+0x20>
+ 26c:	jal	x1,1e4 <__hidden___udivsi3>
+ 270:	addi	x10,x11,0
+ 274:	jalr	x0,0(x5)
+ 278:	sub	x11,x0,x11
+ 27c:	bge	x10,x0,26c <__modsi3+0xc>
+ 280:	sub	x10,x0,x10
+ 284:	jal	x1,1e4 <__hidden___udivsi3>
+ 288:	sub	x10,x0,x11
+ 28c:	jalr	x0,0(x5)

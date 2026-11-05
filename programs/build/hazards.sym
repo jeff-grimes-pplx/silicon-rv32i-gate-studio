@@ -1,0 +1,7 @@
+00000000 T _start
+00000040 t wrong
+0000004c t done
+00000054 d buf
+0000005c B __bss_end
+0000005c B __bss_start
+00010000 B __stack_top

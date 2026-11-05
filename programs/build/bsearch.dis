@@ -1,0 +1,58 @@
+
+build/bsearch.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	15400293          	li	t0,340
+   c:	17400313          	li	t1,372
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	0c400813          	li	a6,196
+  2c:	15400f13          	li	t5,340
+  30:	0c400893          	li	a7,196
+  34:	01080e93          	addi	t4,a6,16
+  38:	15400313          	li	t1,340
+  3c:	010f0e13          	addi	t3,t5,16
+  40:	01f00693          	li	a3,31
+  44:	0008a503          	lw	a0,0(a7)
+  48:	00068713          	mv	a4,a3
+  4c:	07f00793          	li	a5,127
+  50:	00000593          	li	a1,0
+  54:	00000613          	li	a2,0
+  58:	0200006f          	j	78 <main+0x50>
+  5c:	00170613          	addi	a2,a4,1
+  60:	00c68733          	add	a4,a3,a2
+  64:	40175793          	srai	a5,a4,0x1
+  68:	00279793          	slli	a5,a5,0x2
+  6c:	00f807b3          	add	a5,a6,a5
+  70:	02c6c863          	blt	a3,a2,a0 <main+0x78>
+  74:	0107a783          	lw	a5,16(a5)
+  78:	40175713          	srai	a4,a4,0x1
+  7c:	00158593          	addi	a1,a1,1
+  80:	02f50263          	beq	a0,a5,a4 <main+0x7c>
+  84:	fca7ece3          	bltu	a5,a0,5c <main+0x34>
+  88:	fff70693          	addi	a3,a4,-1
+  8c:	00c68733          	add	a4,a3,a2
+  90:	40175793          	srai	a5,a4,0x1
+  94:	00279793          	slli	a5,a5,0x2
+  98:	00f807b3          	add	a5,a6,a5
+  9c:	fcc6dce3          	bge	a3,a2,74 <main+0x4c>
+  a0:	fff00713          	li	a4,-1
+  a4:	00e32023          	sw	a4,0(t1)
+  a8:	00be2023          	sw	a1,0(t3)
+  ac:	00488893          	addi	a7,a7,4
+  b0:	00430313          	addi	t1,t1,4
+  b4:	004e0e13          	addi	t3,t3,4
+  b8:	f9d894e3          	bne	a7,t4,40 <main+0x18>
+  bc:	000f2503          	lw	a0,0(t5)
+  c0:	00008067          	ret

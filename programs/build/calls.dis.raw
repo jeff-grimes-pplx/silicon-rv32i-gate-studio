@@ -1,0 +1,31 @@
+
+build/calls.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	addi	x2,x0,152
+   4:	addi	x10,x0,7
+   8:	jal	x1,20 <square>
+   c:	addi	x8,x10,0
+  10:	addi	x10,x0,5
+  14:	jal	x1,20 <square>
+  18:	add	x10,x10,x8
+  1c:	ebreak
+
+00000020 <square>:
+  20:	addi	x2,x2,-8
+  24:	sw	x1,4(x2)
+  28:	sw	x9,0(x2)
+  2c:	addi	x9,x10,0
+  30:	addi	x5,x0,0
+  34:	addi	x6,x10,0
+  38:	add	x5,x5,x9
+  3c:	addi	x6,x6,-1
+  40:	bne	x6,x0,38 <square+0x18>
+  44:	addi	x10,x5,0
+  48:	lw	x9,0(x2)
+  4c:	lw	x1,4(x2)
+  50:	addi	x2,x2,8
+  54:	jalr	x0,0(x1)

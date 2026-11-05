@@ -1,0 +1,32 @@
+
+build/hazards.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	02800293          	li	t0,40
+   4:	00200313          	li	t1,2
+   8:	006283b3          	add	t2,t0,t1
+   c:	40638e33          	sub	t3,t2,t1
+  10:	007e4eb3          	xor	t4,t3,t2
+  14:	05400593          	li	a1,84
+  18:	01d5a023          	sw	t4,0(a1)
+  1c:	0005af03          	lw	t5,0(a1)
+  20:	001f0f93          	addi	t6,t5,1
+  24:	0045a603          	lw	a2,4(a1)
+  28:	00000013          	nop
+  2c:	01f606b3          	add	a3,a2,t6
+  30:	01f68863          	beq	a3,t6,40 <wrong>
+  34:	01f69c63          	bne	a3,t6,4c <done>
+  38:	00000513          	li	a0,0
+  3c:	00000513          	li	a0,0
+
+00000040 <wrong>:
+  40:	00001537          	lui	a0,0x1
+  44:	bad50513          	addi	a0,a0,-1107 # bad <__bss_end+0xb51>
+  48:	00100073          	ebreak
+
+0000004c <done>:
+  4c:	00068513          	mv	a0,a3
+  50:	00100073          	ebreak

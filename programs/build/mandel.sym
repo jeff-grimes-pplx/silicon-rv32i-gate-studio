@@ -1,0 +1,13 @@
+00000000 T _start
+00000028 T main
+000001b8 T __mulsi3
+000001dc T __divsi3
+000001e4 T __hidden___udivsi3
+000001e4 T __udivsi3
+0000022c T __umodsi3
+00000260 T __modsi3
+00000290 r shade
+0000029c B __bss_start
+0000029c B image
+00000488 B __bss_end
+00010000 B __stack_top

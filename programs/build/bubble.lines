@@ -1,0 +1,48 @@
+
+build/bubble.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+bubble.c:
+File name                        Line number    Starting address    View    Stmt
+bubble.c                                   5                0x28               x
+bubble.c                                   6                0x28       1       x
+bubble.c                                   7                0x28       2       x
+bubble.c                                   7                0x28       3       x
+bubble.c                                   7                0x28       4       x
+bubble.c                                   6                0x30       5
+bubble.c                                   8                0x34       6       x
+bubble.c                                   5                0x34       7
+bubble.c                                   9                0x38       8       x
+bubble.c                                  10                0x38       9       x
+bubble.c                                   9                0x38      10
+bubble.c                                  10                0x3c      11       x
+bubble.c                                   9                0x3c      12
+bubble.c                                   9                0x40      13
+bubble.c                                  10                0x44      14
+bubble.c                                  10                0x48      15       x
+bubble.c                                  10                0x48      16
+bubble.c                                  11                0x4c      17       x
+bubble.c                                  11                0x4c      18
+bubble.c                                   8                0x50      19       x
+bubble.c                                   7                0x58      20       x
+bubble.c                                   7                0x58      21       x
+bubble.c                                  13                0x60      22       x
+bubble.c                                  14                0x60      23
+bubble.c                                   -                0x64
+
+

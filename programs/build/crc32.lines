@@ -1,0 +1,58 @@
+
+build/crc32.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+crc32.c:
+File name                        Line number    Starting address    View    Stmt
+crc32.c                                    6                0x28               x
+crc32.c                                    7                0x28       1       x
+crc32.c                                    8                0x28       2       x
+crc32.c                                    8                0x28       3       x
+crc32.c                                    8                0x28       4       x
+crc32.c                                    8                0x28       5
+crc32.c                                   10                0x28       6
+crc32.c                                    8                0x2c       7
+crc32.c                                   10                0x30       8
+crc32.c                                    7                0x34       9
+crc32.c                                    8                0x38      10
+crc32.c                                    9                0x3c      11       x
+crc32.c                                    9                0x3c      12
+crc32.c                                   10                0x40      13       x
+crc32.c                                   10                0x40      14       x
+crc32.c                                   10                0x40      15       x
+crc32.c                                    9                0x40      16
+crc32.c                                   10                0x44      17       x
+crc32.c                                   10                0x44      18
+crc32.c                                   10                0x48      19
+crc32.c                                   10                0x50      20
+crc32.c                                   10                0x54      21
+crc32.c                                   10                0x58      22
+crc32.c                                   10                0x5c      23       x
+crc32.c                                   10                0x5c      24       x
+crc32.c                                    8                0x60      25       x
+crc32.c                                    8                0x60      26
+crc32.c                                    8                0x64      27
+crc32.c                                    8                0x68      28       x
+crc32.c                                   12                0x6c      29       x
+crc32.c                                   12                0x6c      30
+crc32.c                                   12                0x70      31
+crc32.c                                   13                0x74      32       x
+crc32.c                                   14                0x74      33
+crc32.c                                    -                0x78
+
+

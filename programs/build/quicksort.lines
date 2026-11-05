@@ -1,0 +1,89 @@
+
+build/quicksort.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+quicksort.c:
+File name                        Line number    Starting address    View    Stmt
+quicksort.c                               11                0x28               x
+quicksort.c                               12                0x28       1       x
+quicksort.c                               12                0x28       2
+quicksort.c                               11                0x2c       3
+quicksort.c                               13                0x5c       4       x
+quicksort.c                               13                0x5c       5
+quicksort.c                               14                0x60       6
+quicksort.c                               13                0x68       7
+quicksort.c                               14                0x70       8       x
+quicksort.c                               15                0x70       9       x
+quicksort.c                               16                0x70      10       x
+quicksort.c                               16                0x70      11       x
+quicksort.c                               16                0x70      12       x
+quicksort.c                               15                0x80      13
+quicksort.c                               16                0x84      14
+quicksort.c                               17                0x88      15       x
+quicksort.c                               18                0x88      16       x
+quicksort.c                               19                0x88      17       x
+quicksort.c                               16                0x88      18       x
+quicksort.c                               16                0x88      19       x
+quicksort.c                               17                0x88      20
+quicksort.c                               18                0x8c      21
+quicksort.c                               17                0x94      22
+quicksort.c                               18                0x98      23
+quicksort.c                               19                0x9c      24
+quicksort.c                               20                0xa0      25       x
+quicksort.c                               22                0xa0      26
+quicksort.c                               20                0xa4      27
+quicksort.c                               21                0xa8      28       x
+quicksort.c                               22                0xa8      29       x
+quicksort.c                               21                0xa8      30
+quicksort.c                               22                0xac      31
+quicksort.c                               16                0xb0      32
+quicksort.c                               26                0xbc      33
+quicksort.c                               25                0xc0      34       x
+quicksort.c                               25                0xc0      35
+quicksort.c                               26                0xcc      36       x
+quicksort.c                               28                0xcc      37
+quicksort.c                               26                0xd0      38
+quicksort.c                               27                0xd4      39       x
+quicksort.c                               29                0xd4      40
+quicksort.c                               28                0xd8      41
+quicksort.c                               27                0xdc      42
+quicksort.c                               28                0xe0      43       x
+quicksort.c                               29                0xe0      44       x
+quicksort.c                               30                0xe4      45       x
+quicksort.c                               12                0xe8      46       x
+quicksort.c                               12                0xe8      47
+quicksort.c                               31                0xec      48
+quicksort.c                               16               0x110      49
+quicksort.c                               15               0x11c      50
+quicksort.c                                -               0x128
+
+quicksort.c                               33               0x128               x
+quicksort.c                               34               0x128       1       x
+quicksort.c                               33               0x128       2
+quicksort.c                               34               0x12c       3
+quicksort.c                               33               0x134       4
+quicksort.c                               34               0x138       5
+quicksort.c                               35               0x13c       6       x
+quicksort.c                               35               0x13c       7
+quicksort.c                               35               0x140       8
+quicksort.c                               36               0x144       9
+quicksort.c                               35               0x148      10
+quicksort.c                               36               0x14c      11
+quicksort.c                                -               0x158
+
+

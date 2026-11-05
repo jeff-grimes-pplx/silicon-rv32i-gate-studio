@@ -1,0 +1,27 @@
+
+build/sum.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+sum.S:
+File name                        Line number    Starting address    View    Stmt
+sum.S                                      7                   0               x
+sum.S                                      8                 0x4       1       x
+sum.S                                      9                 0x8       2       x
+sum.S                                     11                 0xc       3       x
+sum.S                                     12                0x10       4       x
+sum.S                                     13                0x14       5       x
+sum.S                                     14                0x18       6       x
+sum.S                                     15                0x1c       7       x
+sum.S                                     17                0x20       8       x
+sum.S                                     18                0x24       9       x
+sum.S                                     19                0x28      10       x
+sum.S                                     21                0x2c      11       x
+sum.S                                     22                0x30      12       x
+sum.S                                     23                0x34      13       x
+sum.S                                     24                0x38      14       x
+sum.S                                     25                0x3c      15       x
+sum.S                                     26                0x40      16       x
+sum.S                                      -                0x44
+
+

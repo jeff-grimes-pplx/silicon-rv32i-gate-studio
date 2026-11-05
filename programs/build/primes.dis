@@ -1,0 +1,64 @@
+
+build/primes.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	0dc00293          	li	t0,220
+   c:	4a000313          	li	t1,1184
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	0dc00313          	li	t1,220
+  2c:	00230513          	addi	a0,t1,2
+  30:	00430813          	addi	a6,t1,4
+  34:	00200693          	li	a3,2
+  38:	00100593          	li	a1,1
+  3c:	23000613          	li	a2,560
+  40:	11900893          	li	a7,281
+  44:	0140006f          	j	58 <main+0x30>
+  48:	00168693          	addi	a3,a3,1
+  4c:	00150513          	addi	a0,a0,1
+  50:	00280813          	addi	a6,a6,2
+  54:	03168a63          	beq	a3,a7,88 <main+0x60>
+  58:	00054783          	lbu	a5,0(a0)
+  5c:	fe0796e3          	bnez	a5,48 <main+0x20>
+  60:	00169713          	slli	a4,a3,0x1
+  64:	00080793          	mv	a5,a6
+  68:	00b78023          	sb	a1,0(a5)
+  6c:	00d70733          	add	a4,a4,a3
+  70:	00d787b3          	add	a5,a5,a3
+  74:	fee65ae3          	bge	a2,a4,68 <main+0x40>
+  78:	00168693          	addi	a3,a3,1
+  7c:	00150513          	addi	a0,a0,1
+  80:	00280813          	addi	a6,a6,2
+  84:	fd169ae3          	bne	a3,a7,58 <main+0x30>
+  88:	00200513          	li	a0,2
+  8c:	40650533          	sub	a0,a0,t1
+  90:	22e30813          	addi	a6,t1,558
+  94:	00030793          	mv	a5,t1
+  98:	00000693          	li	a3,0
+  9c:	06400893          	li	a7,100
+  a0:	0027c603          	lbu	a2,2(a5)
+  a4:	00269713          	slli	a4,a3,0x2
+  a8:	00f505b3          	add	a1,a0,a5
+  ac:	00e30733          	add	a4,t1,a4
+  b0:	02061063          	bnez	a2,d0 <main+0xa8>
+  b4:	22b72a23          	sw	a1,564(a4)
+  b8:	00168693          	addi	a3,a3,1
+  bc:	01078663          	beq	a5,a6,c8 <main+0xa0>
+  c0:	00178793          	addi	a5,a5,1
+  c4:	fd169ee3          	bne	a3,a7,a0 <main+0x78>
+  c8:	3c032503          	lw	a0,960(t1)
+  cc:	00008067          	ret
+  d0:	ff078ce3          	beq	a5,a6,c8 <main+0xa0>
+  d4:	00178793          	addi	a5,a5,1
+  d8:	fc9ff06f          	j	a0 <main+0x78>

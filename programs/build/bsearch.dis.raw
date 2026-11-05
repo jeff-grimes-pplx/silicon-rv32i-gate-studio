@@ -1,0 +1,58 @@
+
+build/bsearch.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,340
+   c:	addi	x6,x0,372
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x16,x0,196
+  2c:	addi	x30,x0,340
+  30:	addi	x17,x0,196
+  34:	addi	x29,x16,16
+  38:	addi	x6,x0,340
+  3c:	addi	x28,x30,16
+  40:	addi	x13,x0,31
+  44:	lw	x10,0(x17)
+  48:	addi	x14,x13,0
+  4c:	addi	x15,x0,127
+  50:	addi	x11,x0,0
+  54:	addi	x12,x0,0
+  58:	jal	x0,78 <main+0x50>
+  5c:	addi	x12,x14,1
+  60:	add	x14,x13,x12
+  64:	srai	x15,x14,0x1
+  68:	slli	x15,x15,0x2
+  6c:	add	x15,x16,x15
+  70:	blt	x13,x12,a0 <main+0x78>
+  74:	lw	x15,16(x15)
+  78:	srai	x14,x14,0x1
+  7c:	addi	x11,x11,1
+  80:	beq	x10,x15,a4 <main+0x7c>
+  84:	bltu	x15,x10,5c <main+0x34>
+  88:	addi	x13,x14,-1
+  8c:	add	x14,x13,x12
+  90:	srai	x15,x14,0x1
+  94:	slli	x15,x15,0x2
+  98:	add	x15,x16,x15
+  9c:	bge	x13,x12,74 <main+0x4c>
+  a0:	addi	x14,x0,-1
+  a4:	sw	x14,0(x6)
+  a8:	sw	x11,0(x28)
+  ac:	addi	x17,x17,4
+  b0:	addi	x6,x6,4
+  b4:	addi	x28,x28,4
+  b8:	bne	x17,x29,40 <main+0x18>
+  bc:	lw	x10,0(x30)
+  c0:	jalr	x0,0(x1)

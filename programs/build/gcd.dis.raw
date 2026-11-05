@@ -1,0 +1,69 @@
+
+build/gcd.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,312
+   c:	addi	x6,x0,312
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x16,x0,240
+  2c:	addi	x10,x16,72
+  30:	addi	x11,x0,240
+  34:	lw	x13,0(x11)
+  38:	lw	x15,4(x11)
+  3c:	beq	x13,x0,b8 <main+0x90>
+  40:	beq	x15,x0,cc <main+0xa4>
+  44:	or	x14,x13,x15
+  48:	andi	x14,x14,1
+  4c:	addi	x12,x0,0
+  50:	bne	x14,x0,e0 <main+0xb8>
+  54:	srli	x13,x13,0x1
+  58:	srli	x15,x15,0x1
+  5c:	or	x14,x13,x15
+  60:	andi	x14,x14,1
+  64:	addi	x12,x12,1
+  68:	beq	x14,x0,54 <main+0x2c>
+  6c:	andi	x14,x13,1
+  70:	bne	x14,x0,8c <main+0x64>
+  74:	srli	x13,x13,0x1
+  78:	andi	x14,x13,1
+  7c:	beq	x14,x0,74 <main+0x4c>
+  80:	jal	x0,8c <main+0x64>
+  84:	bltu	x15,x13,a4 <main+0x7c>
+  88:	sub	x15,x15,x13
+  8c:	bne	x15,x0,98 <main+0x70>
+  90:	jal	x0,b4 <main+0x8c>
+  94:	srli	x15,x15,0x1
+  98:	andi	x14,x15,1
+  9c:	beq	x14,x0,94 <main+0x6c>
+  a0:	jal	x0,84 <main+0x5c>
+  a4:	sub	x14,x13,x15
+  a8:	addi	x13,x15,0
+  ac:	addi	x15,x14,0
+  b0:	jal	x0,98 <main+0x70>
+  b4:	sll	x15,x13,x12
+  b8:	sw	x15,8(x11)
+  bc:	addi	x11,x11,12
+  c0:	bne	x11,x10,34 <main+0xc>
+  c4:	lw	x10,8(x16)
+  c8:	jalr	x0,0(x1)
+  cc:	addi	x15,x13,0
+  d0:	sw	x15,8(x11)
+  d4:	addi	x11,x11,12
+  d8:	bne	x11,x10,34 <main+0xc>
+  dc:	jal	x0,c4 <main+0x9c>
+  e0:	andi	x14,x13,1
+  e4:	bne	x14,x0,98 <main+0x70>
+  e8:	srli	x13,x13,0x1
+  ec:	jal	x0,78 <main+0x50>

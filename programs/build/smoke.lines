@@ -1,0 +1,25 @@
+
+build/smoke.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+smoke.S:
+File name                        Line number    Starting address    View    Stmt
+smoke.S                                    5                   0               x
+smoke.S                                    6                 0x4       1       x
+smoke.S                                    7                 0x8       2       x
+smoke.S                                    8                 0xc       3       x
+smoke.S                                    9                0x10       4       x
+smoke.S                                   10                0x14       5       x
+smoke.S                                   11                0x18       6       x
+smoke.S                                   12                0x1c       7       x
+smoke.S                                   13                0x20       8       x
+smoke.S                                   14                0x24       9       x
+smoke.S                                   15                0x28      10       x
+smoke.S                                   16                0x2c      11       x
+smoke.S                                   18                0x30      12       x
+smoke.S                                   20                0x34      13       x
+smoke.S                                   21                0x3c      14       x
+smoke.S                                    -                0x40
+
+

@@ -1,0 +1,2 @@
+hazard/branch RTL trace checks: 32/32 passed
+exit 0

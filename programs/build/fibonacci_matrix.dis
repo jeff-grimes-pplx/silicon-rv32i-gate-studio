@@ -1,0 +1,130 @@
+
+build/fibonacci_matrix.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	1dc00293          	li	t0,476
+   c:	1ec00313          	li	t1,492
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	fd010113          	addi	sp,sp,-48 # ffd0 <__bss_end+0xfde4>
+  2c:	02812423          	sw	s0,40(sp)
+  30:	00100413          	li	s0,1
+  34:	02912223          	sw	s1,36(sp)
+  38:	01312e23          	sw	s3,28(sp)
+  3c:	01412c23          	sw	s4,24(sp)
+  40:	01512a23          	sw	s5,20(sp)
+  44:	01612823          	sw	s6,16(sp)
+  48:	01712623          	sw	s7,12(sp)
+  4c:	01812423          	sw	s8,8(sp)
+  50:	01912223          	sw	s9,4(sp)
+  54:	02112623          	sw	ra,44(sp)
+  58:	03212023          	sw	s2,32(sp)
+  5c:	00040993          	mv	s3,s0
+  60:	00040b93          	mv	s7,s0
+  64:	00040c93          	mv	s9,s0
+  68:	00500a93          	li	s5,5
+  6c:	00000493          	li	s1,0
+  70:	00000c13          	li	s8,0
+  74:	00000b13          	li	s6,0
+  78:	01e00a13          	li	s4,30
+  7c:	001a7793          	andi	a5,s4,1
+  80:	0a079063          	bnez	a5,120 <main+0xf8>
+  84:	00040593          	mv	a1,s0
+  88:	00040513          	mv	a0,s0
+  8c:	12c000ef          	jal	1b8 <__mulsi3>
+  90:	00050913          	mv	s2,a0
+  94:	00098593          	mv	a1,s3
+  98:	00098513          	mv	a0,s3
+  9c:	11c000ef          	jal	1b8 <__mulsi3>
+  a0:	00050793          	mv	a5,a0
+  a4:	013485b3          	add	a1,s1,s3
+  a8:	00040513          	mv	a0,s0
+  ac:	012789b3          	add	s3,a5,s2
+  b0:	108000ef          	jal	1b8 <__mulsi3>
+  b4:	00048593          	mv	a1,s1
+  b8:	00050413          	mv	s0,a0
+  bc:	00048513          	mv	a0,s1
+  c0:	0f8000ef          	jal	1b8 <__mulsi3>
+  c4:	fffa8a93          	addi	s5,s5,-1
+  c8:	401a5a13          	srai	s4,s4,0x1
+  cc:	012504b3          	add	s1,a0,s2
+  d0:	fa0a96e3          	bnez	s5,7c <main+0x54>
+  d4:	02c12083          	lw	ra,44(sp)
+  d8:	02812403          	lw	s0,40(sp)
+  dc:	1dc00793          	li	a5,476
+  e0:	0197a023          	sw	s9,0(a5)
+  e4:	0167a223          	sw	s6,4(a5)
+  e8:	0187a423          	sw	s8,8(a5)
+  ec:	0177a623          	sw	s7,12(a5)
+  f0:	02412483          	lw	s1,36(sp)
+  f4:	02012903          	lw	s2,32(sp)
+  f8:	01c12983          	lw	s3,28(sp)
+  fc:	01812a03          	lw	s4,24(sp)
+ 100:	01412a83          	lw	s5,20(sp)
+ 104:	00c12b83          	lw	s7,12(sp)
+ 108:	00812c03          	lw	s8,8(sp)
+ 10c:	00412c83          	lw	s9,4(sp)
+ 110:	000b0513          	mv	a0,s6
+ 114:	01012b03          	lw	s6,16(sp)
+ 118:	03010113          	addi	sp,sp,48
+ 11c:	00008067          	ret
+ 120:	000b0593          	mv	a1,s6
+ 124:	00040513          	mv	a0,s0
+ 128:	090000ef          	jal	1b8 <__mulsi3>
+ 12c:	000c8593          	mv	a1,s9
+ 130:	00050913          	mv	s2,a0
+ 134:	00098513          	mv	a0,s3
+ 138:	080000ef          	jal	1b8 <__mulsi3>
+ 13c:	00050793          	mv	a5,a0
+ 140:	000b0593          	mv	a1,s6
+ 144:	00048513          	mv	a0,s1
+ 148:	00f90933          	add	s2,s2,a5
+ 14c:	06c000ef          	jal	1b8 <__mulsi3>
+ 150:	000c8593          	mv	a1,s9
+ 154:	00050b13          	mv	s6,a0
+ 158:	00040513          	mv	a0,s0
+ 15c:	05c000ef          	jal	1b8 <__mulsi3>
+ 160:	00050793          	mv	a5,a0
+ 164:	000b8593          	mv	a1,s7
+ 168:	00040513          	mv	a0,s0
+ 16c:	00fb0b33          	add	s6,s6,a5
+ 170:	048000ef          	jal	1b8 <__mulsi3>
+ 174:	000c0593          	mv	a1,s8
+ 178:	00050c93          	mv	s9,a0
+ 17c:	00098513          	mv	a0,s3
+ 180:	038000ef          	jal	1b8 <__mulsi3>
+ 184:	00050793          	mv	a5,a0
+ 188:	000b8593          	mv	a1,s7
+ 18c:	00048513          	mv	a0,s1
+ 190:	00fc8cb3          	add	s9,s9,a5
+ 194:	024000ef          	jal	1b8 <__mulsi3>
+ 198:	00050b93          	mv	s7,a0
+ 19c:	000c0593          	mv	a1,s8
+ 1a0:	00040513          	mv	a0,s0
+ 1a4:	014000ef          	jal	1b8 <__mulsi3>
+ 1a8:	000c8c13          	mv	s8,s9
+ 1ac:	00ab8bb3          	add	s7,s7,a0
+ 1b0:	00090c93          	mv	s9,s2
+ 1b4:	ed1ff06f          	j	84 <main+0x5c>
+
+000001b8 <__mulsi3>:
+ 1b8:	00050613          	mv	a2,a0
+ 1bc:	00000513          	li	a0,0
+ 1c0:	0015f693          	andi	a3,a1,1
+ 1c4:	00068463          	beqz	a3,1cc <__mulsi3+0x14>
+ 1c8:	00c50533          	add	a0,a0,a2
+ 1cc:	0015d593          	srli	a1,a1,0x1
+ 1d0:	00161613          	slli	a2,a2,0x1
+ 1d4:	fe0596e3          	bnez	a1,1c0 <__mulsi3+0x8>
+ 1d8:	00008067          	ret

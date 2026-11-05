@@ -1,0 +1,17 @@
+
+build/branches.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+branches.S:
+File name                        Line number    Starting address    View    Stmt
+branches.S                                 6                   0               x
+branches.S                                 7                 0x4       1       x
+branches.S                                 8                 0x8       2       x
+branches.S                                10                 0xc       3       x
+branches.S                                11                0x10       4       x
+branches.S                                12                0x14       5       x
+branches.S                                13                0x18       6       x
+branches.S                                 -                0x1c
+
+

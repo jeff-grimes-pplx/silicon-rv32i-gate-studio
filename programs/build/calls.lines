@@ -1,0 +1,32 @@
+
+build/calls.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+calls.S:
+File name                        Line number    Starting address    View    Stmt
+calls.S                                    6                   0               x
+calls.S                                    7                 0x4       1       x
+calls.S                                    8                 0x8       2       x
+calls.S                                    9                 0xc       3       x
+calls.S                                   10                0x10       4       x
+calls.S                                   11                0x14       5       x
+calls.S                                   12                0x18       6       x
+calls.S                                   13                0x1c       7       x
+calls.S                                   16                0x20       8       x
+calls.S                                   17                0x24       9       x
+calls.S                                   18                0x28      10       x
+calls.S                                   19                0x2c      11       x
+calls.S                                   20                0x30      12       x
+calls.S                                   21                0x34      13       x
+calls.S                                   22                0x38      14       x
+calls.S                                   23                0x3c      15       x
+calls.S                                   24                0x40      16       x
+calls.S                                   25                0x44      17       x
+calls.S                                   26                0x48      18       x
+calls.S                                   27                0x4c      19       x
+calls.S                                   28                0x50      20       x
+calls.S                                   29                0x54      21       x
+calls.S                                    -                0x58
+
+

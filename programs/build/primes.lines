@@ -1,0 +1,62 @@
+
+build/primes.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+primes.c:
+File name                        Line number    Starting address    View    Stmt
+primes.c                                   7                0x28               x
+primes.c                                   8                0x28       1       x
+primes.c                                   8                0x28       2       x
+primes.c                                   8                0x28       3       x
+primes.c                                   8                0x34       4
+primes.c                                  10                0x38       5
+primes.c                                  10                0x3c       6
+primes.c                                   8                0x40       7
+primes.c                                   8                0x48       8       x
+primes.c                                   8                0x4c       9       x
+primes.c                                   9                0x58      10       x
+primes.c                                   9                0x58      11
+primes.c                                  10                0x68      12       x
+primes.c                                  10                0x68      13
+primes.c                                  10                0x6c      14       x
+primes.c                                  10                0x70      15       x
+primes.c                                   8                0x78      16       x
+primes.c                                   8                0x7c      17       x
+primes.c                                  14                0x88      18
+primes.c                                   8                0x94      19
+primes.c                                  12                0x98      20
+primes.c                                  13                0x9c      21
+primes.c                                  14                0xa0      22       x
+primes.c                                  14                0xa0      23       x
+primes.c                                  13                0xa0      24       x
+primes.c                                  13                0xa0      25       x
+primes.c                                  14                0xa0      26
+primes.c                                  14                0xa4      27
+primes.c                                  14                0xb0      28
+primes.c                                  14                0xb4      29
+primes.c                                  14                0xb8      30
+primes.c                                  13                0xbc      31       x
+primes.c                                  13                0xbc      32       x
+primes.c                                  13                0xc0      33
+primes.c                                  15                0xc8      34       x
+primes.c                                  16                0xc8      35
+primes.c                                  13                0xd0      36
+primes.c                                  13                0xd4      37
+primes.c                                   -                0xdc
+
+

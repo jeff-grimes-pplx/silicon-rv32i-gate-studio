@@ -1,0 +1,73 @@
+
+build/matmul.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+matmul.c:
+File name                        Line number    Starting address    View    Stmt
+matmul.c                                   7                0x28               x
+matmul.c                                   8                0x28       1       x
+matmul.c                                   8                0x28       2       x
+matmul.c                                   8                0x28       3       x
+matmul.c                                   7                0x28       4
+matmul.c                                   9                0x70       5       x
+matmul.c                                  11                0x70       6
+matmul.c                                  11                0x84       7       x
+matmul.c                                  11                0x84       8       x
+matmul.c                                  11                0x84       9       x
+matmul.c                                  11                0x84      10       x
+matmul.c                                  11                0x84      11       x
+matmul.c                                  11                0x84      12
+matmul.c                                   9                0x8c      13
+matmul.c                                  11                0x90      14
+matmul.c                                  11                0xb0      15
+matmul.c                                  11                0xb4      16       x
+matmul.c                                  11                0xb4      17       x
+matmul.c                                  11                0xb4      18       x
+matmul.c                                  11                0xb4      19       x
+matmul.c                                  11                0xb4      20       x
+matmul.c                                  12                0xb4      21       x
+matmul.c                                  11                0xb4      22
+matmul.c                                  11                0xb8      23
+matmul.c                                  12                0xbc      24
+matmul.c                                   9                0xc0      25       x
+matmul.c                                   9                0xc0      26       x
+matmul.c                                   8                0xc8      27       x
+matmul.c                                   8                0xc8      28       x
+matmul.c                                  14                0xd4      29       x
+matmul.c                                  14                0xd4      30
+matmul.c                                  14                0xdc      31
+matmul.c                                  15                0xe0      32
+matmul.c                                  14                0xe8      33
+matmul.c                                  15                0xec      34
+matmul.c                                   -               0x120
+
+
+muldi3.S:
+File name                        Line number    Starting address    View    Stmt
+muldi3.S                                  37               0x120               x
+muldi3.S                                  38               0x124       1       x
+muldi3.S                                  40               0x128       2       x
+muldi3.S                                  41               0x12c       3       x
+muldi3.S                                  42               0x130       4       x
+muldi3.S                                  44               0x134       5       x
+muldi3.S                                  45               0x138       6       x
+muldi3.S                                  46               0x13c       7       x
+muldi3.S                                  47               0x140       8       x
+muldi3.S                                   -               0x144
+
+

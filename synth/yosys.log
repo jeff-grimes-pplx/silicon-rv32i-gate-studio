@@ -1,0 +1,1851 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `synth/synth.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/silicon_core.sv
+Parsing SystemVerilog input from `rtl/silicon_core.sv' to AST representation.
+Generating RTLIL representation for module `\silicon_core'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \silicon_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \silicon_core
+Removed 0 unused modules.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \silicon_core
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \silicon_core
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:569$139 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:548$137 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$136 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$135 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$131 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:472$120 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$102 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$86 in module silicon_core.
+Marked 2 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$80 in module silicon_core.
+Marked 4 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$71 in module silicon_core.
+Marked 2 switch rules as full_case in process $proc$rtl/silicon_core.sv:328$54 in module silicon_core.
+Marked 3 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$39 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$34 in module silicon_core.
+Marked 3 switch rules as full_case in process $proc$rtl/silicon_core.sv:182$17 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:163$7 in module silicon_core.
+Marked 1 switch rules as full_case in process $proc$rtl/silicon_core.sv:0$2 in module silicon_core.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 30 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~32 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:569$139'.
+     1/1: $0\halted[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+     1/9: $0\memwb_halt[0:0]
+     2/9: $0\memwb_wb_sel[1:0]
+     3/9: $0\memwb_reg_write[0:0]
+     4/9: $0\memwb_rd[4:0]
+     5/9: $0\memwb_load[31:0]
+     6/9: $0\memwb_alu[31:0]
+     7/9: $0\memwb_instr[31:0]
+     8/9: $0\memwb_pc[31:0]
+     9/9: $0\memwb_valid[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$136'.
+     1/1: $1\load_result[31:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$135'.
+     1/1: $1\load_byte[7:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$131'.
+     1/2: $1\dmem_wdata[31:0]
+     2/2: $1\dmem_be[3:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+     1/12: $0\exmem_halt[0:0]
+     2/12: $0\exmem_wb_sel[1:0]
+     3/12: $0\exmem_reg_write[0:0]
+     4/12: $0\exmem_mem_write[0:0]
+     5/12: $0\exmem_mem_read[0:0]
+     6/12: $0\exmem_funct3[2:0]
+     7/12: $0\exmem_rd[4:0]
+     8/12: $0\exmem_store_data[31:0]
+     9/12: $0\exmem_alu[31:0]
+    10/12: $0\exmem_instr[31:0]
+    11/12: $0\exmem_pc[31:0]
+    12/12: $0\exmem_valid[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$102'.
+     1/1: $1\br_cond[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$86'.
+     1/1: $1\alu_y[31:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$80'.
+     1/2: $1\ex_rs2[31:0]
+     2/2: $1\ex_rs1[31:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$71'.
+     1/4: $2\fwd_b_sel[1:0]
+     2/4: $1\fwd_b_sel[1:0]
+     3/4: $2\fwd_a_sel[1:0]
+     4/4: $1\fwd_a_sel[1:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$64'.
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+     1/23: $0\idex_halt[0:0]
+     2/23: $0\idex_wb_sel[1:0]
+     3/23: $0\idex_reg_write[0:0]
+     4/23: $0\idex_mem_write[0:0]
+     5/23: $0\idex_mem_read[0:0]
+     6/23: $0\idex_funct3[2:0]
+     7/23: $0\idex_jalr[0:0]
+     8/23: $0\idex_jal[0:0]
+     9/23: $0\idex_branch[0:0]
+    10/23: $0\idex_alu_b_imm[0:0]
+    11/23: $0\idex_alu_a_pc[0:0]
+    12/23: $0\idex_alu_op[3:0]
+    13/23: $0\idex_uses_rs2[0:0]
+    14/23: $0\idex_uses_rs1[0:0]
+    15/23: $0\idex_rd[4:0]
+    16/23: $0\idex_rs2[4:0]
+    17/23: $0\idex_rs1[4:0]
+    18/23: $0\idex_imm[31:0]
+    19/23: $0\idex_rs2_data[31:0]
+    20/23: $0\idex_rs1_data[31:0]
+    21/23: $0\idex_instr[31:0]
+    22/23: $0\idex_pc[31:0]
+    23/23: $0\idex_valid[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+     1/17: $2\id_uses_rs2[0:0]
+     2/17: $2\id_uses_rs1[0:0]
+     3/17: $2\id_halt[0:0]
+     4/17: $1\id_reg_write[0:0]
+     5/17: $1\id_alu_op[3:0]
+     6/17: $1\id_imm[31:0]
+     7/17: $1\id_halt[0:0]
+     8/17: $1\id_wb_sel[1:0]
+     9/17: $1\id_mem_write[0:0]
+    10/17: $1\id_mem_read[0:0]
+    11/17: $1\id_jalr[0:0]
+    12/17: $1\id_jal[0:0]
+    13/17: $1\id_branch[0:0]
+    14/17: $1\id_alu_b_imm[0:0]
+    15/17: $1\id_alu_a_pc[0:0]
+    16/17: $1\id_uses_rs2[0:0]
+    17/17: $1\id_uses_rs1[0:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$34'.
+     1/1: $1\alu_op_from_funct[3:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+     1/5: $0\ifid_instr[31:0]
+     2/5: $0\ifid_pc[31:0]
+     3/5: $0\ifid_valid[0:0]
+     4/5: $0\fetch_stopped[0:0]
+     5/5: $0\pc[31:0]
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+     1/3: $1$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$15
+     2/3: $1$memwr$\regs$rtl/silicon_core.sv:164$1_DATA[31:0]$14
+     3/3: $1$memwr$\regs$rtl/silicon_core.sv:164$1_ADDR[4:0]$13
+Creating decoders for process `\silicon_core.$proc$rtl/silicon_core.sv:0$2'.
+     1/1: $1\wb_data[31:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\silicon_core.\load_result' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$136'.
+No latch inferred for signal `\silicon_core.\load_byte' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$135'.
+No latch inferred for signal `\silicon_core.\dmem_wdata' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$131'.
+No latch inferred for signal `\silicon_core.\dmem_be' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$131'.
+No latch inferred for signal `\silicon_core.\br_cond' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$102'.
+No latch inferred for signal `\silicon_core.\alu_y' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$86'.
+No latch inferred for signal `\silicon_core.\ex_rs1' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$80'.
+No latch inferred for signal `\silicon_core.\ex_rs2' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$80'.
+No latch inferred for signal `\silicon_core.\fwd_a_sel' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$71'.
+No latch inferred for signal `\silicon_core.\fwd_b_sel' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$71'.
+No latch inferred for signal `\silicon_core.\exmem_fwd_value' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$64'.
+No latch inferred for signal `\silicon_core.\id_imm' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_uses_rs1' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_uses_rs2' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_alu_op' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_alu_a_pc' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_alu_b_imm' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_branch' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_jal' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_jalr' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_mem_read' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_mem_write' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_reg_write' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_wb_sel' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\id_halt' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+No latch inferred for signal `\silicon_core.\alu_op_from_funct' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$34'.
+No latch inferred for signal `\silicon_core.\wb_data' from process `\silicon_core.$proc$rtl/silicon_core.sv:0$2'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\silicon_core.\halted' using process `\silicon_core.$proc$rtl/silicon_core.sv:569$139'.
+  created $dff cell `$procdff$714' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_valid' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$715' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$716' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_instr' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$717' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_alu' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$718' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_load' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$719' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_rd' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$720' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_reg_write' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$721' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_wb_sel' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$722' with positive edge clock.
+Creating register for signal `\silicon_core.\memwb_halt' using process `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+  created $dff cell `$procdff$723' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_valid' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$724' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$725' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_instr' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$726' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_alu' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$727' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_store_data' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$728' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_rd' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$729' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_funct3' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$730' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_mem_read' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$731' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_mem_write' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$732' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_reg_write' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$733' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_wb_sel' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$734' with positive edge clock.
+Creating register for signal `\silicon_core.\exmem_halt' using process `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+  created $dff cell `$procdff$735' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_valid' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$736' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$737' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_instr' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$738' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_rs1_data' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$739' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_rs2_data' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$740' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_imm' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$741' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_rs1' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$742' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_rs2' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$743' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_rd' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$744' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_uses_rs1' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$745' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_uses_rs2' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$746' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_alu_op' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$747' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_alu_a_pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$748' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_alu_b_imm' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$749' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_branch' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$750' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_jal' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$751' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_jalr' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$752' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_funct3' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$753' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_mem_read' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$754' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_mem_write' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$755' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_reg_write' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$756' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_wb_sel' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$757' with positive edge clock.
+Creating register for signal `\silicon_core.\idex_halt' using process `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+  created $dff cell `$procdff$758' with positive edge clock.
+Creating register for signal `\silicon_core.\pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+  created $dff cell `$procdff$759' with positive edge clock.
+Creating register for signal `\silicon_core.\fetch_stopped' using process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+  created $dff cell `$procdff$760' with positive edge clock.
+Creating register for signal `\silicon_core.\ifid_valid' using process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+  created $dff cell `$procdff$761' with positive edge clock.
+Creating register for signal `\silicon_core.\ifid_pc' using process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+  created $dff cell `$procdff$762' with positive edge clock.
+Creating register for signal `\silicon_core.\ifid_instr' using process `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+  created $dff cell `$procdff$763' with positive edge clock.
+Creating register for signal `\silicon_core.$memwr$\regs$rtl/silicon_core.sv:164$1_ADDR' using process `\silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+  created $dff cell `$procdff$764' with positive edge clock.
+Creating register for signal `\silicon_core.$memwr$\regs$rtl/silicon_core.sv:164$1_DATA' using process `\silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+  created $dff cell `$procdff$765' with positive edge clock.
+Creating register for signal `\silicon_core.$memwr$\regs$rtl/silicon_core.sv:164$1_EN' using process `\silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+  created $dff cell `$procdff$766' with positive edge clock.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:569$139'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:569$139'.
+Found and cleaned up 2 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:548$137'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$136'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$136'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$135'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$135'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$131'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$131'.
+Found and cleaned up 2 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:472$120'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$102'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$102'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$86'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$86'.
+Found and cleaned up 2 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:0$80'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$80'.
+Found and cleaned up 4 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:0$71'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$71'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$64'.
+Found and cleaned up 3 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:328$54'.
+Found and cleaned up 3 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$39'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$34'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$34'.
+Found and cleaned up 6 empty switches in `\silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:182$17'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:163$7'.
+Found and cleaned up 1 empty switch in `\silicon_core.$proc$rtl/silicon_core.sv:0$2'.
+Removing empty process `silicon_core.$proc$rtl/silicon_core.sv:0$2'.
+Cleaned up 32 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~68 debug messages>
+
+3.3. Executing FLATTEN pass (flatten design).
+
+3.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 34 unused cells and 345 unused wires.
+<suppressed ~42 debug messages>
+
+3.6. Executing CHECK pass (checking for obvious problems).
+Checking module silicon_core...
+Found and reported 0 problems.
+
+3.7. Executing OPT pass (performing simple optimizations).
+
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+<suppressed ~114 debug messages>
+Removed a total of 38 cells.
+
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$303.
+    dead port 1/2 on $mux $procmux$312.
+    dead port 2/2 on $mux $procmux$511.
+Removed 3 multiplexer ports.
+<suppressed ~69 debug messages>
+
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+    New ctrl vector for $pmux cell $procmux$279: { $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP $procmux$286_CMP $procmux$285_CMP $procmux$284_CMP $procmux$283_CMP $procmux$282_CMP $procmux$281_CMP $procmux$280_CMP }
+    New ctrl vector for $pmux cell $procmux$516: $auto$opt_reduce.cc:137:opt_pmux$769
+    New ctrl vector for $pmux cell $procmux$527: { $procmux$523_CMP $procmux$530_CMP $auto$opt_reduce.cc:137:opt_pmux$771 }
+    New ctrl vector for $pmux cell $procmux$537: { $auto$opt_reduce.cc:137:opt_pmux$773 $procmux$521_CMP $procmux$530_CMP $procmux$538_CMP }
+    New ctrl vector for $pmux cell $procmux$552: { $auto$opt_reduce.cc:137:opt_pmux$775 $procmux$519_CMP }
+    New ctrl vector for $pmux cell $procmux$604: $auto$opt_reduce.cc:137:opt_pmux$777
+    New ctrl vector for $pmux cell $procmux$622: $auto$opt_reduce.cc:137:opt_pmux$779
+    New ctrl vector for $pmux cell $procmux$629: $auto$opt_reduce.cc:137:opt_pmux$781
+    Consolidated identical input bits for $mux cell $procmux$702:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0]
+      New connections: $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [31:1] = { $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] $0$memwr$\regs$rtl/silicon_core.sv:164$1_EN[31:0]$10 [0] }
+  Optimizing cells in module \silicon_core.
+Performed a total of 9 changes.
+
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 1 unused cells and 42 unused wires.
+<suppressed ~2 debug messages>
+
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~69 debug messages>
+
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.7.16. Finished OPT passes. (There is nothing left to do.)
+
+3.8. Executing FSM pass (extract and optimize FSM).
+
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register silicon_core.idex_alu_op.
+Not marking silicon_core.idex_wb_sel as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\idex_alu_op' from module `\silicon_core'.
+  found $dff cell for state register: $procdff$747
+  root of input selection tree: $0\idex_alu_op[3:0]
+  found reset state: 4'0000 (guessed from mux tree)
+  found ctrl input: \rst
+  found ctrl input: \halted
+  found ctrl input: $or$rtl/silicon_core.sv:340$56_Y
+  found ctrl input: $auto$opt_reduce.cc:137:opt_pmux$771
+  found ctrl input: $procmux$530_CMP
+  found ctrl input: $procmux$523_CMP
+  found state code: 4'0000
+  found ctrl input: $procmux$638_CMP
+  found ctrl input: $procmux$639_CMP
+  found ctrl input: $procmux$640_CMP
+  found ctrl input: $procmux$641_CMP
+  found ctrl input: $procmux$642_CMP
+  found ctrl input: $procmux$643_CMP
+  found ctrl input: $eq$rtl/silicon_core.sv:312$40_Y
+  found state code: 4'1001
+  found state code: 4'1000
+  found ctrl input: \ifid_instr [30]
+  found state code: 4'0110
+  found state code: 4'0111
+  found state code: 4'0101
+  found state code: 4'0100
+  found state code: 4'0011
+  found state code: 4'0010
+  found ctrl input: $logic_and$rtl/silicon_core.sv:250$36_Y
+  found state code: 4'0001
+  found state code: 4'1010
+  found ctrl output: $procmux$280_CMP
+  found ctrl output: $procmux$281_CMP
+  found ctrl output: $procmux$282_CMP
+  found ctrl output: $procmux$283_CMP
+  found ctrl output: $procmux$284_CMP
+  found ctrl output: $procmux$285_CMP
+  found ctrl output: $procmux$286_CMP
+  found ctrl output: $procmux$287_CMP
+  found ctrl output: $procmux$288_CMP
+  found ctrl output: $procmux$289_CMP
+  ctrl inputs: { $auto$opt_reduce.cc:137:opt_pmux$771 $procmux$643_CMP $procmux$642_CMP $procmux$641_CMP $procmux$640_CMP $procmux$639_CMP $procmux$638_CMP $procmux$530_CMP $procmux$523_CMP $or$rtl/silicon_core.sv:340$56_Y $eq$rtl/silicon_core.sv:312$40_Y $logic_and$rtl/silicon_core.sv:250$36_Y \ifid_instr [30] \halted \rst }
+  ctrl outputs: { $procmux$289_CMP $procmux$288_CMP $procmux$287_CMP $procmux$286_CMP $procmux$285_CMP $procmux$284_CMP $procmux$283_CMP $procmux$282_CMP $procmux$281_CMP $procmux$280_CMP $0\idex_alu_op[3:0] }
+  transition:     4'0000 15'0------000---00 ->     4'0000 14'00000000000000
+  transition:     4'0000 15'--------10---00 ->     4'1010 14'00000000001010
+  transition:     4'0000 15'-------1-0---00 ->     4'0001 14'00000000000001
+  transition:     4'0000 15'1000000--00--00 ->     4'1001 14'00000000001001
+  transition:     4'0000 15'1--------010-00 ->     4'0000 14'00000000000000
+  transition:     4'0000 15'1--------011-00 ->     4'0001 14'00000000000001
+  transition:     4'0000 15'11-------0---00 ->     4'0010 14'00000000000010
+  transition:     4'0000 15'1-1------0---00 ->     4'0011 14'00000000000011
+  transition:     4'0000 15'1--1-----0---00 ->     4'0100 14'00000000000100
+  transition:     4'0000 15'1---1----0---00 ->     4'0101 14'00000000000101
+  transition:     4'0000 15'1----1---0--000 ->     4'0110 14'00000000000110
+  transition:     4'0000 15'1----1---0--100 ->     4'0111 14'00000000000111
+  transition:     4'0000 15'1-----1--0---00 ->     4'1000 14'00000000001000
+  transition:     4'0000 15'---------1---00 ->     4'0000 14'00000000000000
+  transition:     4'0000 15'-------------10 ->     4'0000 14'00000000000000
+  transition:     4'0000 15'--------------1 ->     4'0000 14'00000000000000
+  transition:     4'1000 15'0------000---00 ->     4'0000 14'00000001000000
+  transition:     4'1000 15'--------10---00 ->     4'1010 14'00000001001010
+  transition:     4'1000 15'-------1-0---00 ->     4'0001 14'00000001000001
+  transition:     4'1000 15'1000000--00--00 ->     4'1001 14'00000001001001
+  transition:     4'1000 15'1--------010-00 ->     4'0000 14'00000001000000
+  transition:     4'1000 15'1--------011-00 ->     4'0001 14'00000001000001
+  transition:     4'1000 15'11-------0---00 ->     4'0010 14'00000001000010
+  transition:     4'1000 15'1-1------0---00 ->     4'0011 14'00000001000011
+  transition:     4'1000 15'1--1-----0---00 ->     4'0100 14'00000001000100
+  transition:     4'1000 15'1---1----0---00 ->     4'0101 14'00000001000101
+  transition:     4'1000 15'1----1---0--000 ->     4'0110 14'00000001000110
+  transition:     4'1000 15'1----1---0--100 ->     4'0111 14'00000001000111
+  transition:     4'1000 15'1-----1--0---00 ->     4'1000 14'00000001001000
+  transition:     4'1000 15'---------1---00 ->     4'1000 14'00000001001000
+  transition:     4'1000 15'-------------10 ->     4'1000 14'00000001001000
+  transition:     4'1000 15'--------------1 ->     4'0000 14'00000001000000
+  transition:     4'0100 15'0------000---00 ->     4'0000 14'00010000000000
+  transition:     4'0100 15'--------10---00 ->     4'1010 14'00010000001010
+  transition:     4'0100 15'-------1-0---00 ->     4'0001 14'00010000000001
+  transition:     4'0100 15'1000000--00--00 ->     4'1001 14'00010000001001
+  transition:     4'0100 15'1--------010-00 ->     4'0000 14'00010000000000
+  transition:     4'0100 15'1--------011-00 ->     4'0001 14'00010000000001
+  transition:     4'0100 15'11-------0---00 ->     4'0010 14'00010000000010
+  transition:     4'0100 15'1-1------0---00 ->     4'0011 14'00010000000011
+  transition:     4'0100 15'1--1-----0---00 ->     4'0100 14'00010000000100
+  transition:     4'0100 15'1---1----0---00 ->     4'0101 14'00010000000101
+  transition:     4'0100 15'1----1---0--000 ->     4'0110 14'00010000000110
+  transition:     4'0100 15'1----1---0--100 ->     4'0111 14'00010000000111
+  transition:     4'0100 15'1-----1--0---00 ->     4'1000 14'00010000001000
+  transition:     4'0100 15'---------1---00 ->     4'0100 14'00010000000100
+  transition:     4'0100 15'-------------10 ->     4'0100 14'00010000000100
+  transition:     4'0100 15'--------------1 ->     4'0000 14'00010000000000
+  transition:     4'0010 15'0------000---00 ->     4'0000 14'01000000000000
+  transition:     4'0010 15'--------10---00 ->     4'1010 14'01000000001010
+  transition:     4'0010 15'-------1-0---00 ->     4'0001 14'01000000000001
+  transition:     4'0010 15'1000000--00--00 ->     4'1001 14'01000000001001
+  transition:     4'0010 15'1--------010-00 ->     4'0000 14'01000000000000
+  transition:     4'0010 15'1--------011-00 ->     4'0001 14'01000000000001
+  transition:     4'0010 15'11-------0---00 ->     4'0010 14'01000000000010
+  transition:     4'0010 15'1-1------0---00 ->     4'0011 14'01000000000011
+  transition:     4'0010 15'1--1-----0---00 ->     4'0100 14'01000000000100
+  transition:     4'0010 15'1---1----0---00 ->     4'0101 14'01000000000101
+  transition:     4'0010 15'1----1---0--000 ->     4'0110 14'01000000000110
+  transition:     4'0010 15'1----1---0--100 ->     4'0111 14'01000000000111
+  transition:     4'0010 15'1-----1--0---00 ->     4'1000 14'01000000001000
+  transition:     4'0010 15'---------1---00 ->     4'0010 14'01000000000010
+  transition:     4'0010 15'-------------10 ->     4'0010 14'01000000000010
+  transition:     4'0010 15'--------------1 ->     4'0000 14'01000000000000
+  transition:     4'1010 15'0------000---00 ->     4'0000 14'00000000010000
+  transition:     4'1010 15'--------10---00 ->     4'1010 14'00000000011010
+  transition:     4'1010 15'-------1-0---00 ->     4'0001 14'00000000010001
+  transition:     4'1010 15'1000000--00--00 ->     4'1001 14'00000000011001
+  transition:     4'1010 15'1--------010-00 ->     4'0000 14'00000000010000
+  transition:     4'1010 15'1--------011-00 ->     4'0001 14'00000000010001
+  transition:     4'1010 15'11-------0---00 ->     4'0010 14'00000000010010
+  transition:     4'1010 15'1-1------0---00 ->     4'0011 14'00000000010011
+  transition:     4'1010 15'1--1-----0---00 ->     4'0100 14'00000000010100
+  transition:     4'1010 15'1---1----0---00 ->     4'0101 14'00000000010101
+  transition:     4'1010 15'1----1---0--000 ->     4'0110 14'00000000010110
+  transition:     4'1010 15'1----1---0--100 ->     4'0111 14'00000000010111
+  transition:     4'1010 15'1-----1--0---00 ->     4'1000 14'00000000011000
+  transition:     4'1010 15'---------1---00 ->     4'1010 14'00000000011010
+  transition:     4'1010 15'-------------10 ->     4'1010 14'00000000011010
+  transition:     4'1010 15'--------------1 ->     4'0000 14'00000000010000
+  transition:     4'0110 15'0------000---00 ->     4'0000 14'00000100000000
+  transition:     4'0110 15'--------10---00 ->     4'1010 14'00000100001010
+  transition:     4'0110 15'-------1-0---00 ->     4'0001 14'00000100000001
+  transition:     4'0110 15'1000000--00--00 ->     4'1001 14'00000100001001
+  transition:     4'0110 15'1--------010-00 ->     4'0000 14'00000100000000
+  transition:     4'0110 15'1--------011-00 ->     4'0001 14'00000100000001
+  transition:     4'0110 15'11-------0---00 ->     4'0010 14'00000100000010
+  transition:     4'0110 15'1-1------0---00 ->     4'0011 14'00000100000011
+  transition:     4'0110 15'1--1-----0---00 ->     4'0100 14'00000100000100
+  transition:     4'0110 15'1---1----0---00 ->     4'0101 14'00000100000101
+  transition:     4'0110 15'1----1---0--000 ->     4'0110 14'00000100000110
+  transition:     4'0110 15'1----1---0--100 ->     4'0111 14'00000100000111
+  transition:     4'0110 15'1-----1--0---00 ->     4'1000 14'00000100001000
+  transition:     4'0110 15'---------1---00 ->     4'0110 14'00000100000110
+  transition:     4'0110 15'-------------10 ->     4'0110 14'00000100000110
+  transition:     4'0110 15'--------------1 ->     4'0000 14'00000100000000
+  transition:     4'0001 15'0------000---00 ->     4'0000 14'10000000000000
+  transition:     4'0001 15'--------10---00 ->     4'1010 14'10000000001010
+  transition:     4'0001 15'-------1-0---00 ->     4'0001 14'10000000000001
+  transition:     4'0001 15'1000000--00--00 ->     4'1001 14'10000000001001
+  transition:     4'0001 15'1--------010-00 ->     4'0000 14'10000000000000
+  transition:     4'0001 15'1--------011-00 ->     4'0001 14'10000000000001
+  transition:     4'0001 15'11-------0---00 ->     4'0010 14'10000000000010
+  transition:     4'0001 15'1-1------0---00 ->     4'0011 14'10000000000011
+  transition:     4'0001 15'1--1-----0---00 ->     4'0100 14'10000000000100
+  transition:     4'0001 15'1---1----0---00 ->     4'0101 14'10000000000101
+  transition:     4'0001 15'1----1---0--000 ->     4'0110 14'10000000000110
+  transition:     4'0001 15'1----1---0--100 ->     4'0111 14'10000000000111
+  transition:     4'0001 15'1-----1--0---00 ->     4'1000 14'10000000001000
+  transition:     4'0001 15'---------1---00 ->     4'0001 14'10000000000001
+  transition:     4'0001 15'-------------10 ->     4'0001 14'10000000000001
+  transition:     4'0001 15'--------------1 ->     4'0000 14'10000000000000
+  transition:     4'1001 15'0------000---00 ->     4'0000 14'00000000100000
+  transition:     4'1001 15'--------10---00 ->     4'1010 14'00000000101010
+  transition:     4'1001 15'-------1-0---00 ->     4'0001 14'00000000100001
+  transition:     4'1001 15'1000000--00--00 ->     4'1001 14'00000000101001
+  transition:     4'1001 15'1--------010-00 ->     4'0000 14'00000000100000
+  transition:     4'1001 15'1--------011-00 ->     4'0001 14'00000000100001
+  transition:     4'1001 15'11-------0---00 ->     4'0010 14'00000000100010
+  transition:     4'1001 15'1-1------0---00 ->     4'0011 14'00000000100011
+  transition:     4'1001 15'1--1-----0---00 ->     4'0100 14'00000000100100
+  transition:     4'1001 15'1---1----0---00 ->     4'0101 14'00000000100101
+  transition:     4'1001 15'1----1---0--000 ->     4'0110 14'00000000100110
+  transition:     4'1001 15'1----1---0--100 ->     4'0111 14'00000000100111
+  transition:     4'1001 15'1-----1--0---00 ->     4'1000 14'00000000101000
+  transition:     4'1001 15'---------1---00 ->     4'1001 14'00000000101001
+  transition:     4'1001 15'-------------10 ->     4'1001 14'00000000101001
+  transition:     4'1001 15'--------------1 ->     4'0000 14'00000000100000
+  transition:     4'0101 15'0------000---00 ->     4'0000 14'00001000000000
+  transition:     4'0101 15'--------10---00 ->     4'1010 14'00001000001010
+  transition:     4'0101 15'-------1-0---00 ->     4'0001 14'00001000000001
+  transition:     4'0101 15'1000000--00--00 ->     4'1001 14'00001000001001
+  transition:     4'0101 15'1--------010-00 ->     4'0000 14'00001000000000
+  transition:     4'0101 15'1--------011-00 ->     4'0001 14'00001000000001
+  transition:     4'0101 15'11-------0---00 ->     4'0010 14'00001000000010
+  transition:     4'0101 15'1-1------0---00 ->     4'0011 14'00001000000011
+  transition:     4'0101 15'1--1-----0---00 ->     4'0100 14'00001000000100
+  transition:     4'0101 15'1---1----0---00 ->     4'0101 14'00001000000101
+  transition:     4'0101 15'1----1---0--000 ->     4'0110 14'00001000000110
+  transition:     4'0101 15'1----1---0--100 ->     4'0111 14'00001000000111
+  transition:     4'0101 15'1-----1--0---00 ->     4'1000 14'00001000001000
+  transition:     4'0101 15'---------1---00 ->     4'0101 14'00001000000101
+  transition:     4'0101 15'-------------10 ->     4'0101 14'00001000000101
+  transition:     4'0101 15'--------------1 ->     4'0000 14'00001000000000
+  transition:     4'0011 15'0------000---00 ->     4'0000 14'00100000000000
+  transition:     4'0011 15'--------10---00 ->     4'1010 14'00100000001010
+  transition:     4'0011 15'-------1-0---00 ->     4'0001 14'00100000000001
+  transition:     4'0011 15'1000000--00--00 ->     4'1001 14'00100000001001
+  transition:     4'0011 15'1--------010-00 ->     4'0000 14'00100000000000
+  transition:     4'0011 15'1--------011-00 ->     4'0001 14'00100000000001
+  transition:     4'0011 15'11-------0---00 ->     4'0010 14'00100000000010
+  transition:     4'0011 15'1-1------0---00 ->     4'0011 14'00100000000011
+  transition:     4'0011 15'1--1-----0---00 ->     4'0100 14'00100000000100
+  transition:     4'0011 15'1---1----0---00 ->     4'0101 14'00100000000101
+  transition:     4'0011 15'1----1---0--000 ->     4'0110 14'00100000000110
+  transition:     4'0011 15'1----1---0--100 ->     4'0111 14'00100000000111
+  transition:     4'0011 15'1-----1--0---00 ->     4'1000 14'00100000001000
+  transition:     4'0011 15'---------1---00 ->     4'0011 14'00100000000011
+  transition:     4'0011 15'-------------10 ->     4'0011 14'00100000000011
+  transition:     4'0011 15'--------------1 ->     4'0000 14'00100000000000
+  transition:     4'0111 15'0------000---00 ->     4'0000 14'00000010000000
+  transition:     4'0111 15'--------10---00 ->     4'1010 14'00000010001010
+  transition:     4'0111 15'-------1-0---00 ->     4'0001 14'00000010000001
+  transition:     4'0111 15'1000000--00--00 ->     4'1001 14'00000010001001
+  transition:     4'0111 15'1--------010-00 ->     4'0000 14'00000010000000
+  transition:     4'0111 15'1--------011-00 ->     4'0001 14'00000010000001
+  transition:     4'0111 15'11-------0---00 ->     4'0010 14'00000010000010
+  transition:     4'0111 15'1-1------0---00 ->     4'0011 14'00000010000011
+  transition:     4'0111 15'1--1-----0---00 ->     4'0100 14'00000010000100
+  transition:     4'0111 15'1---1----0---00 ->     4'0101 14'00000010000101
+  transition:     4'0111 15'1----1---0--000 ->     4'0110 14'00000010000110
+  transition:     4'0111 15'1----1---0--100 ->     4'0111 14'00000010000111
+  transition:     4'0111 15'1-----1--0---00 ->     4'1000 14'00000010001000
+  transition:     4'0111 15'---------1---00 ->     4'0111 14'00000010000111
+  transition:     4'0111 15'-------------10 ->     4'0111 14'00000010000111
+  transition:     4'0111 15'--------------1 ->     4'0000 14'00000010000000
+
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\idex_alu_op$782' from module `\silicon_core'.
+
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 18 unused cells and 18 unused wires.
+<suppressed ~21 debug messages>
+
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\idex_alu_op$782' from module `\silicon_core'.
+  Removing unused output signal $0\idex_alu_op[3:0] [0].
+  Removing unused output signal $0\idex_alu_op[3:0] [1].
+  Removing unused output signal $0\idex_alu_op[3:0] [2].
+  Removing unused output signal $0\idex_alu_op[3:0] [3].
+
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\idex_alu_op$782' from module `\silicon_core' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000 -> ----------1
+  1000 -> ---------1-
+  0100 -> --------1--
+  0010 -> -------1---
+  1010 -> ------1----
+  0110 -> -----1-----
+  0001 -> ----1------
+  1001 -> ---1-------
+  0101 -> --1--------
+  0011 -> -1---------
+  0111 -> 1----------
+
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\idex_alu_op$782' from module `silicon_core':
+-------------------------------------
+
+  Information on FSM $fsm$\idex_alu_op$782 (\idex_alu_op):
+
+  Number of input signals:   15
+  Number of output signals:  10
+  Number of state bits:      11
+
+  Input signals:
+    0: \rst
+    1: \halted
+    2: \ifid_instr [30]
+    3: $logic_and$rtl/silicon_core.sv:250$36_Y
+    4: $eq$rtl/silicon_core.sv:312$40_Y
+    5: $or$rtl/silicon_core.sv:340$56_Y
+    6: $procmux$523_CMP
+    7: $procmux$530_CMP
+    8: $procmux$638_CMP
+    9: $procmux$639_CMP
+   10: $procmux$640_CMP
+   11: $procmux$641_CMP
+   12: $procmux$642_CMP
+   13: $procmux$643_CMP
+   14: $auto$opt_reduce.cc:137:opt_pmux$771
+
+  Output signals:
+    0: $procmux$280_CMP
+    1: $procmux$281_CMP
+    2: $procmux$282_CMP
+    3: $procmux$283_CMP
+    4: $procmux$284_CMP
+    5: $procmux$285_CMP
+    6: $procmux$286_CMP
+    7: $procmux$287_CMP
+    8: $procmux$288_CMP
+    9: $procmux$289_CMP
+
+  State encoding:
+    0: 11'----------1  <RESET STATE>
+    1: 11'---------1-
+    2: 11'--------1--
+    3: 11'-------1---
+    4: 11'------1----
+    5: 11'-----1-----
+    6: 11'----1------
+    7: 11'---1-------
+    8: 11'--1--------
+    9: 11'-1---------
+   10: 11'1----------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 15'1--------010-00   ->     0 10'0000000000
+      1:     0 15'0------000---00   ->     0 10'0000000000
+      2:     0 15'---------1---00   ->     0 10'0000000000
+      3:     0 15'-------------10   ->     0 10'0000000000
+      4:     0 15'--------------1   ->     0 10'0000000000
+      5:     0 15'1-----1--0---00   ->     1 10'0000000000
+      6:     0 15'1--1-----0---00   ->     2 10'0000000000
+      7:     0 15'11-------0---00   ->     3 10'0000000000
+      8:     0 15'--------10---00   ->     4 10'0000000000
+      9:     0 15'1----1---0--000   ->     5 10'0000000000
+     10:     0 15'1--------011-00   ->     6 10'0000000000
+     11:     0 15'-------1-0---00   ->     6 10'0000000000
+     12:     0 15'1000000--00--00   ->     7 10'0000000000
+     13:     0 15'1---1----0---00   ->     8 10'0000000000
+     14:     0 15'1-1------0---00   ->     9 10'0000000000
+     15:     0 15'1----1---0--100   ->    10 10'0000000000
+     16:     1 15'1--------010-00   ->     0 10'0000000100
+     17:     1 15'0------000---00   ->     0 10'0000000100
+     18:     1 15'--------------1   ->     0 10'0000000100
+     19:     1 15'1-----1--0---00   ->     1 10'0000000100
+     20:     1 15'---------1---00   ->     1 10'0000000100
+     21:     1 15'-------------10   ->     1 10'0000000100
+     22:     1 15'1--1-----0---00   ->     2 10'0000000100
+     23:     1 15'11-------0---00   ->     3 10'0000000100
+     24:     1 15'--------10---00   ->     4 10'0000000100
+     25:     1 15'1----1---0--000   ->     5 10'0000000100
+     26:     1 15'1--------011-00   ->     6 10'0000000100
+     27:     1 15'-------1-0---00   ->     6 10'0000000100
+     28:     1 15'1000000--00--00   ->     7 10'0000000100
+     29:     1 15'1---1----0---00   ->     8 10'0000000100
+     30:     1 15'1-1------0---00   ->     9 10'0000000100
+     31:     1 15'1----1---0--100   ->    10 10'0000000100
+     32:     2 15'1--------010-00   ->     0 10'0001000000
+     33:     2 15'0------000---00   ->     0 10'0001000000
+     34:     2 15'--------------1   ->     0 10'0001000000
+     35:     2 15'1-----1--0---00   ->     1 10'0001000000
+     36:     2 15'1--1-----0---00   ->     2 10'0001000000
+     37:     2 15'---------1---00   ->     2 10'0001000000
+     38:     2 15'-------------10   ->     2 10'0001000000
+     39:     2 15'11-------0---00   ->     3 10'0001000000
+     40:     2 15'--------10---00   ->     4 10'0001000000
+     41:     2 15'1----1---0--000   ->     5 10'0001000000
+     42:     2 15'1--------011-00   ->     6 10'0001000000
+     43:     2 15'-------1-0---00   ->     6 10'0001000000
+     44:     2 15'1000000--00--00   ->     7 10'0001000000
+     45:     2 15'1---1----0---00   ->     8 10'0001000000
+     46:     2 15'1-1------0---00   ->     9 10'0001000000
+     47:     2 15'1----1---0--100   ->    10 10'0001000000
+     48:     3 15'1--------010-00   ->     0 10'0100000000
+     49:     3 15'0------000---00   ->     0 10'0100000000
+     50:     3 15'--------------1   ->     0 10'0100000000
+     51:     3 15'1-----1--0---00   ->     1 10'0100000000
+     52:     3 15'1--1-----0---00   ->     2 10'0100000000
+     53:     3 15'11-------0---00   ->     3 10'0100000000
+     54:     3 15'---------1---00   ->     3 10'0100000000
+     55:     3 15'-------------10   ->     3 10'0100000000
+     56:     3 15'--------10---00   ->     4 10'0100000000
+     57:     3 15'1----1---0--000   ->     5 10'0100000000
+     58:     3 15'1--------011-00   ->     6 10'0100000000
+     59:     3 15'-------1-0---00   ->     6 10'0100000000
+     60:     3 15'1000000--00--00   ->     7 10'0100000000
+     61:     3 15'1---1----0---00   ->     8 10'0100000000
+     62:     3 15'1-1------0---00   ->     9 10'0100000000
+     63:     3 15'1----1---0--100   ->    10 10'0100000000
+     64:     4 15'1--------010-00   ->     0 10'0000000001
+     65:     4 15'0------000---00   ->     0 10'0000000001
+     66:     4 15'--------------1   ->     0 10'0000000001
+     67:     4 15'1-----1--0---00   ->     1 10'0000000001
+     68:     4 15'1--1-----0---00   ->     2 10'0000000001
+     69:     4 15'11-------0---00   ->     3 10'0000000001
+     70:     4 15'--------10---00   ->     4 10'0000000001
+     71:     4 15'---------1---00   ->     4 10'0000000001
+     72:     4 15'-------------10   ->     4 10'0000000001
+     73:     4 15'1----1---0--000   ->     5 10'0000000001
+     74:     4 15'1--------011-00   ->     6 10'0000000001
+     75:     4 15'-------1-0---00   ->     6 10'0000000001
+     76:     4 15'1000000--00--00   ->     7 10'0000000001
+     77:     4 15'1---1----0---00   ->     8 10'0000000001
+     78:     4 15'1-1------0---00   ->     9 10'0000000001
+     79:     4 15'1----1---0--100   ->    10 10'0000000001
+     80:     5 15'1--------010-00   ->     0 10'0000010000
+     81:     5 15'0------000---00   ->     0 10'0000010000
+     82:     5 15'--------------1   ->     0 10'0000010000
+     83:     5 15'1-----1--0---00   ->     1 10'0000010000
+     84:     5 15'1--1-----0---00   ->     2 10'0000010000
+     85:     5 15'11-------0---00   ->     3 10'0000010000
+     86:     5 15'--------10---00   ->     4 10'0000010000
+     87:     5 15'1----1---0--000   ->     5 10'0000010000
+     88:     5 15'---------1---00   ->     5 10'0000010000
+     89:     5 15'-------------10   ->     5 10'0000010000
+     90:     5 15'1--------011-00   ->     6 10'0000010000
+     91:     5 15'-------1-0---00   ->     6 10'0000010000
+     92:     5 15'1000000--00--00   ->     7 10'0000010000
+     93:     5 15'1---1----0---00   ->     8 10'0000010000
+     94:     5 15'1-1------0---00   ->     9 10'0000010000
+     95:     5 15'1----1---0--100   ->    10 10'0000010000
+     96:     6 15'1--------010-00   ->     0 10'1000000000
+     97:     6 15'0------000---00   ->     0 10'1000000000
+     98:     6 15'--------------1   ->     0 10'1000000000
+     99:     6 15'1-----1--0---00   ->     1 10'1000000000
+    100:     6 15'1--1-----0---00   ->     2 10'1000000000
+    101:     6 15'11-------0---00   ->     3 10'1000000000
+    102:     6 15'--------10---00   ->     4 10'1000000000
+    103:     6 15'1----1---0--000   ->     5 10'1000000000
+    104:     6 15'1--------011-00   ->     6 10'1000000000
+    105:     6 15'-------1-0---00   ->     6 10'1000000000
+    106:     6 15'---------1---00   ->     6 10'1000000000
+    107:     6 15'-------------10   ->     6 10'1000000000
+    108:     6 15'1000000--00--00   ->     7 10'1000000000
+    109:     6 15'1---1----0---00   ->     8 10'1000000000
+    110:     6 15'1-1------0---00   ->     9 10'1000000000
+    111:     6 15'1----1---0--100   ->    10 10'1000000000
+    112:     7 15'1--------010-00   ->     0 10'0000000010
+    113:     7 15'0------000---00   ->     0 10'0000000010
+    114:     7 15'--------------1   ->     0 10'0000000010
+    115:     7 15'1-----1--0---00   ->     1 10'0000000010
+    116:     7 15'1--1-----0---00   ->     2 10'0000000010
+    117:     7 15'11-------0---00   ->     3 10'0000000010
+    118:     7 15'--------10---00   ->     4 10'0000000010
+    119:     7 15'1----1---0--000   ->     5 10'0000000010
+    120:     7 15'1--------011-00   ->     6 10'0000000010
+    121:     7 15'-------1-0---00   ->     6 10'0000000010
+    122:     7 15'1000000--00--00   ->     7 10'0000000010
+    123:     7 15'---------1---00   ->     7 10'0000000010
+    124:     7 15'-------------10   ->     7 10'0000000010
+    125:     7 15'1---1----0---00   ->     8 10'0000000010
+    126:     7 15'1-1------0---00   ->     9 10'0000000010
+    127:     7 15'1----1---0--100   ->    10 10'0000000010
+    128:     8 15'1--------010-00   ->     0 10'0000100000
+    129:     8 15'0------000---00   ->     0 10'0000100000
+    130:     8 15'--------------1   ->     0 10'0000100000
+    131:     8 15'1-----1--0---00   ->     1 10'0000100000
+    132:     8 15'1--1-----0---00   ->     2 10'0000100000
+    133:     8 15'11-------0---00   ->     3 10'0000100000
+    134:     8 15'--------10---00   ->     4 10'0000100000
+    135:     8 15'1----1---0--000   ->     5 10'0000100000
+    136:     8 15'1--------011-00   ->     6 10'0000100000
+    137:     8 15'-------1-0---00   ->     6 10'0000100000
+    138:     8 15'1000000--00--00   ->     7 10'0000100000
+    139:     8 15'1---1----0---00   ->     8 10'0000100000
+    140:     8 15'---------1---00   ->     8 10'0000100000
+    141:     8 15'-------------10   ->     8 10'0000100000
+    142:     8 15'1-1------0---00   ->     9 10'0000100000
+    143:     8 15'1----1---0--100   ->    10 10'0000100000
+    144:     9 15'1--------010-00   ->     0 10'0010000000
+    145:     9 15'0------000---00   ->     0 10'0010000000
+    146:     9 15'--------------1   ->     0 10'0010000000
+    147:     9 15'1-----1--0---00   ->     1 10'0010000000
+    148:     9 15'1--1-----0---00   ->     2 10'0010000000
+    149:     9 15'11-------0---00   ->     3 10'0010000000
+    150:     9 15'--------10---00   ->     4 10'0010000000
+    151:     9 15'1----1---0--000   ->     5 10'0010000000
+    152:     9 15'1--------011-00   ->     6 10'0010000000
+    153:     9 15'-------1-0---00   ->     6 10'0010000000
+    154:     9 15'1000000--00--00   ->     7 10'0010000000
+    155:     9 15'1---1----0---00   ->     8 10'0010000000
+    156:     9 15'1-1------0---00   ->     9 10'0010000000
+    157:     9 15'---------1---00   ->     9 10'0010000000
+    158:     9 15'-------------10   ->     9 10'0010000000
+    159:     9 15'1----1---0--100   ->    10 10'0010000000
+    160:    10 15'1--------010-00   ->     0 10'0000001000
+    161:    10 15'0------000---00   ->     0 10'0000001000
+    162:    10 15'--------------1   ->     0 10'0000001000
+    163:    10 15'1-----1--0---00   ->     1 10'0000001000
+    164:    10 15'1--1-----0---00   ->     2 10'0000001000
+    165:    10 15'11-------0---00   ->     3 10'0000001000
+    166:    10 15'--------10---00   ->     4 10'0000001000
+    167:    10 15'1----1---0--000   ->     5 10'0000001000
+    168:    10 15'1--------011-00   ->     6 10'0000001000
+    169:    10 15'-------1-0---00   ->     6 10'0000001000
+    170:    10 15'1000000--00--00   ->     7 10'0000001000
+    171:    10 15'1---1----0---00   ->     8 10'0000001000
+    172:    10 15'1-1------0---00   ->     9 10'0000001000
+    173:    10 15'1----1---0--100   ->    10 10'0000001000
+    174:    10 15'---------1---00   ->    10 10'0000001000
+    175:    10 15'-------------10   ->    10 10'0000001000
+
+-------------------------------------
+
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\idex_alu_op$782' from module `\silicon_core'.
+
+3.9. Executing OPT pass (performing simple optimizations).
+
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~2 debug messages>
+
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+<suppressed ~60 debug messages>
+Removed a total of 20 cells.
+
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~68 debug messages>
+
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$763 ($dff) from module silicon_core (D = $procmux$651_Y, Q = \ifid_instr, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$925 ($sdff) from module silicon_core (D = \imem_rdata, Q = \ifid_instr).
+Adding SRST signal on $procdff$762 ($dff) from module silicon_core (D = $procmux$662_Y, Q = \ifid_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$935 ($sdff) from module silicon_core (D = \pc, Q = \ifid_pc).
+Adding SRST signal on $procdff$761 ($dff) from module silicon_core (D = $procmux$673_Y, Q = \ifid_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$945 ($sdff) from module silicon_core (D = $procmux$671_Y, Q = \ifid_valid).
+Adding SRST signal on $procdff$760 ($dff) from module silicon_core (D = $procmux$683_Y, Q = \fetch_stopped, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$953 ($sdff) from module silicon_core (D = 1'1, Q = \fetch_stopped).
+Adding SRST signal on $procdff$759 ($dff) from module silicon_core (D = $procmux$696_Y, Q = \pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$959 ($sdff) from module silicon_core (D = $procmux$694_Y, Q = \pc).
+Adding SRST signal on $procdff$758 ($dff) from module silicon_core (D = $procmux$320_Y, Q = \idex_halt, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$969 ($sdff) from module silicon_core (D = $procmux$318_Y, Q = \idex_halt).
+Adding SRST signal on $procdff$757 ($dff) from module silicon_core (D = $procmux$328_Y, Q = \idex_wb_sel, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$971 ($sdff) from module silicon_core (D = \id_wb_sel, Q = \idex_wb_sel).
+Adding SRST signal on $procdff$756 ($dff) from module silicon_core (D = $procmux$336_Y, Q = \idex_reg_write, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$979 ($sdff) from module silicon_core (D = $procmux$334_Y, Q = \idex_reg_write).
+Adding SRST signal on $procdff$755 ($dff) from module silicon_core (D = $procmux$344_Y, Q = \idex_mem_write, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$981 ($sdff) from module silicon_core (D = $procmux$342_Y, Q = \idex_mem_write).
+Adding SRST signal on $procdff$754 ($dff) from module silicon_core (D = $procmux$352_Y, Q = \idex_mem_read, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$983 ($sdff) from module silicon_core (D = $procmux$350_Y, Q = \idex_mem_read).
+Adding SRST signal on $procdff$753 ($dff) from module silicon_core (D = $procmux$360_Y, Q = \idex_funct3, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$985 ($sdff) from module silicon_core (D = \ifid_instr [14:12], Q = \idex_funct3).
+Adding SRST signal on $procdff$752 ($dff) from module silicon_core (D = $procmux$368_Y, Q = \idex_jalr, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$993 ($sdff) from module silicon_core (D = $procmux$366_Y, Q = \idex_jalr).
+Adding SRST signal on $procdff$751 ($dff) from module silicon_core (D = $procmux$376_Y, Q = \idex_jal, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$995 ($sdff) from module silicon_core (D = $procmux$374_Y, Q = \idex_jal).
+Adding SRST signal on $procdff$750 ($dff) from module silicon_core (D = $procmux$384_Y, Q = \idex_branch, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$997 ($sdff) from module silicon_core (D = $procmux$382_Y, Q = \idex_branch).
+Adding SRST signal on $procdff$749 ($dff) from module silicon_core (D = $procmux$392_Y, Q = \idex_alu_b_imm, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$999 ($sdff) from module silicon_core (D = \id_alu_b_imm, Q = \idex_alu_b_imm).
+Adding SRST signal on $procdff$748 ($dff) from module silicon_core (D = $procmux$400_Y, Q = \idex_alu_a_pc, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1007 ($sdff) from module silicon_core (D = \id_alu_a_pc, Q = \idex_alu_a_pc).
+Adding SRST signal on $procdff$744 ($dff) from module silicon_core (D = $procmux$432_Y, Q = \idex_rd, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1015 ($sdff) from module silicon_core (D = $procmux$430_Y, Q = \idex_rd).
+Adding SRST signal on $procdff$743 ($dff) from module silicon_core (D = $procmux$440_Y, Q = \idex_rs2, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1017 ($sdff) from module silicon_core (D = \ifid_instr [24:20], Q = \idex_rs2).
+Adding SRST signal on $procdff$742 ($dff) from module silicon_core (D = $procmux$448_Y, Q = \idex_rs1, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1025 ($sdff) from module silicon_core (D = \ifid_instr [19:15], Q = \idex_rs1).
+Adding SRST signal on $procdff$741 ($dff) from module silicon_core (D = $procmux$456_Y, Q = \idex_imm, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1033 ($sdff) from module silicon_core (D = \id_imm, Q = \idex_imm).
+Adding SRST signal on $procdff$740 ($dff) from module silicon_core (D = $procmux$464_Y, Q = \idex_rs2_data, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1041 ($sdff) from module silicon_core (D = \id_rs2_data, Q = \idex_rs2_data).
+Adding SRST signal on $procdff$739 ($dff) from module silicon_core (D = $procmux$472_Y, Q = \idex_rs1_data, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1049 ($sdff) from module silicon_core (D = \id_rs1_data, Q = \idex_rs1_data).
+Adding SRST signal on $procdff$737 ($dff) from module silicon_core (D = $procmux$488_Y, Q = \idex_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1057 ($sdff) from module silicon_core (D = \ifid_pc, Q = \idex_pc).
+Adding SRST signal on $procdff$736 ($dff) from module silicon_core (D = $procmux$496_Y, Q = \idex_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1065 ($sdff) from module silicon_core (D = $procmux$494_Y, Q = \idex_valid).
+Adding SRST signal on $procdff$735 ($dff) from module silicon_core (D = $procmux$210_Y, Q = \exmem_halt, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1067 ($sdff) from module silicon_core (D = $and$rtl/silicon_core.sv:193$19_Y, Q = \exmem_halt).
+Adding SRST signal on $procdff$734 ($dff) from module silicon_core (D = $procmux$215_Y, Q = \exmem_wb_sel, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$1069 ($sdff) from module silicon_core (D = \idex_wb_sel, Q = \exmem_wb_sel).
+Adding SRST signal on $procdff$733 ($dff) from module silicon_core (D = $procmux$220_Y, Q = \exmem_reg_write, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1071 ($sdff) from module silicon_core (D = $and$rtl/silicon_core.sv:488$125_Y, Q = \exmem_reg_write).
+Adding SRST signal on $procdff$732 ($dff) from module silicon_core (D = $procmux$225_Y, Q = \exmem_mem_write, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1073 ($sdff) from module silicon_core (D = $and$rtl/silicon_core.sv:487$124_Y, Q = \exmem_mem_write).
+Adding SRST signal on $procdff$731 ($dff) from module silicon_core (D = $procmux$230_Y, Q = \exmem_mem_read, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1075 ($sdff) from module silicon_core (D = $and$rtl/silicon_core.sv:325$44_Y, Q = \exmem_mem_read).
+Adding SRST signal on $procdff$730 ($dff) from module silicon_core (D = $procmux$235_Y, Q = \exmem_funct3, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$1077 ($sdff) from module silicon_core (D = \idex_funct3, Q = \exmem_funct3).
+Adding SRST signal on $procdff$729 ($dff) from module silicon_core (D = $procmux$240_Y, Q = \exmem_rd, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1079 ($sdff) from module silicon_core (D = \idex_rd, Q = \exmem_rd).
+Adding SRST signal on $procdff$728 ($dff) from module silicon_core (D = $procmux$245_Y, Q = \exmem_store_data, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1081 ($sdff) from module silicon_core (D = \ex_rs2, Q = \exmem_store_data).
+Adding SRST signal on $procdff$727 ($dff) from module silicon_core (D = $procmux$250_Y, Q = \exmem_alu, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1083 ($sdff) from module silicon_core (D = \alu_y, Q = \exmem_alu).
+Adding SRST signal on $procdff$725 ($dff) from module silicon_core (D = $procmux$260_Y, Q = \exmem_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1085 ($sdff) from module silicon_core (D = \idex_pc, Q = \exmem_pc).
+Adding SRST signal on $procdff$724 ($dff) from module silicon_core (D = $procmux$265_Y, Q = \exmem_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1087 ($sdff) from module silicon_core (D = \idex_valid, Q = \exmem_valid).
+Adding SRST signal on $procdff$723 ($dff) from module silicon_core (D = $procmux$146_Y, Q = \memwb_halt, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1089 ($sdff) from module silicon_core (D = \exmem_halt, Q = \memwb_halt).
+Adding SRST signal on $procdff$722 ($dff) from module silicon_core (D = $procmux$151_Y, Q = \memwb_wb_sel, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$1091 ($sdff) from module silicon_core (D = \exmem_wb_sel, Q = \memwb_wb_sel).
+Adding SRST signal on $procdff$721 ($dff) from module silicon_core (D = $procmux$156_Y, Q = \memwb_reg_write, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1093 ($sdff) from module silicon_core (D = \exmem_reg_write, Q = \memwb_reg_write).
+Adding SRST signal on $procdff$720 ($dff) from module silicon_core (D = $procmux$161_Y, Q = \memwb_rd, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1095 ($sdff) from module silicon_core (D = \exmem_rd, Q = \memwb_rd).
+Adding SRST signal on $procdff$719 ($dff) from module silicon_core (D = $procmux$166_Y, Q = \memwb_load, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1097 ($sdff) from module silicon_core (D = \load_result, Q = \memwb_load).
+Adding SRST signal on $procdff$718 ($dff) from module silicon_core (D = $procmux$171_Y, Q = \memwb_alu, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1099 ($sdff) from module silicon_core (D = \exmem_alu, Q = \memwb_alu).
+Adding SRST signal on $procdff$716 ($dff) from module silicon_core (D = $procmux$181_Y, Q = \memwb_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1101 ($sdff) from module silicon_core (D = \exmem_pc, Q = \memwb_pc).
+Adding SRST signal on $procdff$715 ($dff) from module silicon_core (D = $procmux$186_Y, Q = \memwb_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1103 ($sdff) from module silicon_core (D = \exmem_valid, Q = \memwb_valid).
+Adding SRST signal on $procdff$714 ($dff) from module silicon_core (D = $procmux$141_Y, Q = \halted, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1105 ($sdff) from module silicon_core (D = 1'1, Q = \halted).
+
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 104 unused cells and 138 unused wires.
+<suppressed ~105 debug messages>
+
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+3.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+<suppressed ~111 debug messages>
+Removed a total of 37 cells.
+
+3.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 0 unused cells and 37 unused wires.
+<suppressed ~1 debug messages>
+
+3.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+3.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.9.23. Finished OPT passes. (There is nothing left to do.)
+
+3.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 bits (of 32) from port B of cell silicon_core.$add$rtl/silicon_core.sv:156$3 ($add).
+Removed top 29 bits (of 32) from port B of cell silicon_core.$add$rtl/silicon_core.sv:180$16 ($add).
+Removed top 1 bits (of 7) from port B of cell silicon_core.$eq$rtl/silicon_core.sv:250$35 ($eq).
+Removed top 29 bits (of 32) from port B of cell silicon_core.$add$rtl/silicon_core.sv:383$66 ($add).
+Removed top 3 bits (of 4) from port A of cell silicon_core.$shl$rtl/silicon_core.sv:509$132 ($shl).
+Removed top 2 bits (of 3) from port B of cell silicon_core.$procmux$195_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$procmux$200_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$procmux$204_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell silicon_core.$procmux$276_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$procmux$294_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$procmux$298_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell silicon_core.$procmux$518_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell silicon_core.$procmux$519_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell silicon_core.$procmux$522_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell silicon_core.$procmux$523_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell silicon_core.$procmux$538_CMP0 ($eq).
+Removed top 1 bits (of 32) from mux cell silicon_core.$procmux$537 ($pmux).
+Removed top 2 bits (of 3) from port B of cell silicon_core.$auto$opt_dff.cc:195:make_patterns_logic$962 ($ne).
+Removed top 1 bits (of 3) from port B of cell silicon_core.$procmux$641_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell silicon_core.$procmux$642_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell silicon_core.$procmux$643_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$auto$opt_dff.cc:195:make_patterns_logic$948 ($ne).
+Removed top 1 bits (of 2) from port B of cell silicon_core.$procmux$713_CMP0 ($eq).
+
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module silicon_core:
+  creating $macc model for $add$rtl/silicon_core.sv:156$3 ($add).
+  creating $macc model for $add$rtl/silicon_core.sv:180$16 ($add).
+  creating $macc model for $add$rtl/silicon_core.sv:383$66 ($add).
+  creating $macc model for $add$rtl/silicon_core.sv:426$87 ($add).
+  creating $macc model for $add$rtl/silicon_core.sv:465$112 ($add).
+  creating $macc model for $sub$rtl/silicon_core.sv:420$83 ($sub).
+  creating $alu model for $macc $sub$rtl/silicon_core.sv:420$83.
+  creating $alu model for $macc $add$rtl/silicon_core.sv:465$112.
+  creating $alu model for $macc $add$rtl/silicon_core.sv:426$87.
+  creating $alu model for $macc $add$rtl/silicon_core.sv:383$66.
+  creating $alu model for $macc $add$rtl/silicon_core.sv:180$16.
+  creating $alu model for $macc $add$rtl/silicon_core.sv:156$3.
+  creating $alu model for $lt$rtl/silicon_core.sv:421$84 ($lt): new $alu
+  creating $alu model for $lt$rtl/silicon_core.sv:422$85 ($lt): merged with $sub$rtl/silicon_core.sv:420$83.
+  creating $alu model for $lt$rtl/silicon_core.sv:453$104 ($lt): new $alu
+  creating $alu model for $lt$rtl/silicon_core.sv:455$107 ($lt): new $alu
+  creating $alu model for $eq$rtl/silicon_core.sv:448$101 ($eq): merged with $lt$rtl/silicon_core.sv:455$107.
+  creating $alu cell for $lt$rtl/silicon_core.sv:455$107, $eq$rtl/silicon_core.sv:448$101: $auto$alumacc.cc:495:replace_alu$1110
+  creating $alu cell for $lt$rtl/silicon_core.sv:453$104: $auto$alumacc.cc:495:replace_alu$1117
+  creating $alu cell for $add$rtl/silicon_core.sv:156$3: $auto$alumacc.cc:495:replace_alu$1124
+  creating $alu cell for $add$rtl/silicon_core.sv:180$16: $auto$alumacc.cc:495:replace_alu$1127
+  creating $alu cell for $add$rtl/silicon_core.sv:383$66: $auto$alumacc.cc:495:replace_alu$1130
+  creating $alu cell for $add$rtl/silicon_core.sv:426$87: $auto$alumacc.cc:495:replace_alu$1133
+  creating $alu cell for $add$rtl/silicon_core.sv:465$112: $auto$alumacc.cc:495:replace_alu$1136
+  creating $alu cell for $lt$rtl/silicon_core.sv:421$84: $auto$alumacc.cc:495:replace_alu$1139
+  creating $alu cell for $sub$rtl/silicon_core.sv:420$83, $lt$rtl/silicon_core.sv:422$85: $auto$alumacc.cc:495:replace_alu$1146
+  created 9 $alu and 0 $macc cells.
+
+3.14. Executing SHARE pass (SAT-based resource sharing).
+Found 5 cells in module silicon_core that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshr$rtl/silicon_core.sv:433$91 ($sshr):
+    Found 1 activation_patterns using ctrl signal \idex_alu_op [10].
+    No candidates found.
+  Analyzing resource sharing options for $shr$rtl/silicon_core.sv:432$90 ($shr):
+    Found 1 activation_patterns using ctrl signal \idex_alu_op [5].
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl/silicon_core.sv:428$88 ($shl):
+    Found 1 activation_patterns using ctrl signal \idex_alu_op [3].
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\regs$rtl/silicon_core.sv:231$26 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $logic_and$rtl/silicon_core.sv:233$32_Y $eq$rtl/silicon_core.sv:231$25_Y }.
+    Found 1 candidates: $memrd$\regs$rtl/silicon_core.sv:230$23
+    Analyzing resource sharing with $memrd$\regs$rtl/silicon_core.sv:230$23 ($memrd):
+      Found 1 activation_patterns using ctrl signal { $logic_and$rtl/silicon_core.sv:232$29_Y $eq$rtl/silicon_core.sv:230$22_Y }.
+      Activation pattern for cell $memrd$\regs$rtl/silicon_core.sv:231$26: { $logic_and$rtl/silicon_core.sv:233$32_Y $eq$rtl/silicon_core.sv:231$25_Y } = 2'00
+      Activation pattern for cell $memrd$\regs$rtl/silicon_core.sv:230$23: { $logic_and$rtl/silicon_core.sv:232$29_Y $eq$rtl/silicon_core.sv:230$22_Y } = 2'00
+      Size of SAT problem: 9 cells, 107 variables, 265 clauses
+      According to the SAT solver this pair of cells can not be shared.
+      Model from SAT solver: { $logic_and$rtl/silicon_core.sv:233$32_Y $logic_and$rtl/silicon_core.sv:232$29_Y $eq$rtl/silicon_core.sv:231$25_Y $eq$rtl/silicon_core.sv:230$22_Y } = 4'0000
+  Analyzing resource sharing options for $memrd$\regs$rtl/silicon_core.sv:230$23 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $logic_and$rtl/silicon_core.sv:232$29_Y $eq$rtl/silicon_core.sv:230$22_Y }.
+    No candidates found.
+
+3.15. Executing OPT pass (performing simple optimizations).
+
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~1 debug messages>
+
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+3.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.15.16. Finished OPT passes. (There is nothing left to do.)
+
+3.16. Executing MEMORY pass.
+
+3.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing silicon_core.regs write port 0.
+
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\regs'[0] in module `\silicon_core': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\regs'[1] in module `\silicon_core': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port address `\regs'[0] in module `\silicon_core': merged address FF to cell.
+Checking read port address `\regs'[1] in module `\silicon_core': merged address FF to cell.
+
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory silicon_core.regs by address:
+
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.18. Executing OPT pass (performing simple optimizations).
+
+3.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~28 debug messages>
+
+3.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$960 ($sdffe) from module silicon_core (D = $procmux$694_Y [1:0], Q = \pc [1:0]).
+
+3.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+3.18.5. Rerunning OPT passes. (Removed registers in this run.)
+
+3.18.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~1 debug messages>
+
+3.18.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.18.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.18.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+3.18.10. Finished fast OPT passes.
+
+3.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \regs in module \silicon_core:
+  created 31 $dff cells and 0 static cells of width 32.
+Extracted addr FF from read port 0 of silicon_core.regs: $\regs$rdreg[0]
+Extracted addr FF from read port 1 of silicon_core.regs: $\regs$rdreg[1]
+  read interface: 2 $dff and 62 $mux cells.
+  write interface: 31 write mux blocks.
+
+3.20. Executing OPT pass (performing simple optimizations).
+
+3.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~64 debug messages>
+
+3.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~62 debug messages>
+
+3.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$1170: { $auto$opt_dff.cc:194:make_patterns_logic$947 $auto$opt_dff.cc:194:make_patterns_logic$961 $auto$rtlil.cc:2779:Not$1002 \redirect }
+    Consolidated identical input bits for $pmux cell $procmux$203:
+      Old ports: A=\exmem_store_data, B={ \exmem_store_data [7:0] \exmem_store_data [7:0] \exmem_store_data [7:0] \exmem_store_data [7:0] \exmem_store_data [15:0] \exmem_store_data [15:0] }, Y=\dmem_wdata
+      New ports: A=\exmem_store_data [31:8], B={ \exmem_store_data [7:0] \exmem_store_data [7:0] \exmem_store_data [7:0] \exmem_store_data [15:0] \exmem_store_data [15:8] }, Y=\dmem_wdata [31:8]
+      New connections: \dmem_wdata [7:0] = \exmem_store_data [7:0]
+    Consolidated identical input bits for $mux cell $procmux$300:
+      Old ports: A=2'00, B=2'10, Y=$2\fwd_b_sel[1:0]
+      New ports: A=1'0, B=1'1, Y=$2\fwd_b_sel[1:0] [1]
+      New connections: $2\fwd_b_sel[1:0] [0] = 1'0
+    Consolidated identical input bits for $mux cell $procmux$309:
+      Old ports: A=2'00, B=2'10, Y=$2\fwd_a_sel[1:0]
+      New ports: A=1'0, B=1'1, Y=$2\fwd_a_sel[1:0] [1]
+      New connections: $2\fwd_a_sel[1:0] [0] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$rtl/silicon_core.sv:513$133:
+      Old ports: A=4'0011, B=4'1100, Y=$ternary$rtl/silicon_core.sv:513$133_Y
+      New ports: A=2'01, B=2'10, Y={ $ternary$rtl/silicon_core.sv:513$133_Y [2] $ternary$rtl/silicon_core.sv:513$133_Y [0] }
+      New connections: { $ternary$rtl/silicon_core.sv:513$133_Y [3] $ternary$rtl/silicon_core.sv:513$133_Y [1] } = { $ternary$rtl/silicon_core.sv:513$133_Y [2] $ternary$rtl/silicon_core.sv:513$133_Y [0] }
+  Optimizing cells in module \silicon_core.
+Performed a total of 5 changes.
+
+3.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.20.6. Executing OPT_SHARE pass.
+
+3.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $\regs$rdreg[0] ($dff) from module silicon_core (D = $auto$rtlil.cc:2914:Mux$1155, Q = $\regs$rdreg[0]$q, rval = 5'00000).
+Adding SRST signal on $\regs$rdreg[1] ($dff) from module silicon_core (D = $auto$rtlil.cc:2914:Mux$1160, Q = $\regs$rdreg[1]$q, rval = 5'00000).
+
+3.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 2 unused cells and 102 unused wires.
+<suppressed ~3 debug messages>
+
+3.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~4 debug messages>
+
+3.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~62 debug messages>
+
+3.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.20.14. Executing OPT_SHARE pass.
+
+3.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\regs[9]$1188 ($dff) from module silicon_core (D = \wb_data, Q = \regs[9]).
+Adding EN signal on $memory\regs[8]$1186 ($dff) from module silicon_core (D = \wb_data, Q = \regs[8]).
+Adding EN signal on $memory\regs[7]$1184 ($dff) from module silicon_core (D = \wb_data, Q = \regs[7]).
+Adding EN signal on $memory\regs[6]$1182 ($dff) from module silicon_core (D = \wb_data, Q = \regs[6]).
+Adding EN signal on $memory\regs[5]$1180 ($dff) from module silicon_core (D = \wb_data, Q = \regs[5]).
+Adding EN signal on $memory\regs[4]$1178 ($dff) from module silicon_core (D = \wb_data, Q = \regs[4]).
+Adding EN signal on $memory\regs[3]$1176 ($dff) from module silicon_core (D = \wb_data, Q = \regs[3]).
+Adding EN signal on $memory\regs[31]$1232 ($dff) from module silicon_core (D = \wb_data, Q = \regs[31]).
+Adding EN signal on $memory\regs[30]$1230 ($dff) from module silicon_core (D = \wb_data, Q = \regs[30]).
+Adding EN signal on $memory\regs[2]$1174 ($dff) from module silicon_core (D = \wb_data, Q = \regs[2]).
+Adding EN signal on $memory\regs[29]$1228 ($dff) from module silicon_core (D = \wb_data, Q = \regs[29]).
+Adding EN signal on $memory\regs[28]$1226 ($dff) from module silicon_core (D = \wb_data, Q = \regs[28]).
+Adding EN signal on $memory\regs[27]$1224 ($dff) from module silicon_core (D = \wb_data, Q = \regs[27]).
+Adding EN signal on $memory\regs[26]$1222 ($dff) from module silicon_core (D = \wb_data, Q = \regs[26]).
+Adding EN signal on $memory\regs[25]$1220 ($dff) from module silicon_core (D = \wb_data, Q = \regs[25]).
+Adding EN signal on $memory\regs[24]$1218 ($dff) from module silicon_core (D = \wb_data, Q = \regs[24]).
+Adding EN signal on $memory\regs[23]$1216 ($dff) from module silicon_core (D = \wb_data, Q = \regs[23]).
+Adding EN signal on $memory\regs[22]$1214 ($dff) from module silicon_core (D = \wb_data, Q = \regs[22]).
+Adding EN signal on $memory\regs[21]$1212 ($dff) from module silicon_core (D = \wb_data, Q = \regs[21]).
+Adding EN signal on $memory\regs[20]$1210 ($dff) from module silicon_core (D = \wb_data, Q = \regs[20]).
+Adding EN signal on $memory\regs[1]$1172 ($dff) from module silicon_core (D = \wb_data, Q = \regs[1]).
+Adding EN signal on $memory\regs[19]$1208 ($dff) from module silicon_core (D = \wb_data, Q = \regs[19]).
+Adding EN signal on $memory\regs[18]$1206 ($dff) from module silicon_core (D = \wb_data, Q = \regs[18]).
+Adding EN signal on $memory\regs[17]$1204 ($dff) from module silicon_core (D = \wb_data, Q = \regs[17]).
+Adding EN signal on $memory\regs[16]$1202 ($dff) from module silicon_core (D = \wb_data, Q = \regs[16]).
+Adding EN signal on $memory\regs[15]$1200 ($dff) from module silicon_core (D = \wb_data, Q = \regs[15]).
+Adding EN signal on $memory\regs[14]$1198 ($dff) from module silicon_core (D = \wb_data, Q = \regs[14]).
+Adding EN signal on $memory\regs[13]$1196 ($dff) from module silicon_core (D = \wb_data, Q = \regs[13]).
+Adding EN signal on $memory\regs[12]$1194 ($dff) from module silicon_core (D = \wb_data, Q = \regs[12]).
+Adding EN signal on $memory\regs[11]$1192 ($dff) from module silicon_core (D = \wb_data, Q = \regs[11]).
+Adding EN signal on $memory\regs[10]$1190 ($dff) from module silicon_core (D = \wb_data, Q = \regs[10]).
+
+3.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 31 unused cells and 35 unused wires.
+<suppressed ~32 debug messages>
+
+3.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \silicon_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+3.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \silicon_core.
+Performed a total of 0 changes.
+
+3.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.20.22. Executing OPT_SHARE pass.
+
+3.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+
+3.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+
+3.20.26. Finished OPT passes. (There is nothing left to do.)
+
+3.21. Executing TECHMAP pass (map to technology primitives).
+
+3.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+3.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$feecc7a0dbd012970970f2858f15e786e251f677\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$e765c459d3029c22a22a27989e94858fd9ebfa9c\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod$8fabc56b80a569262acfc42757a02ca0b8e91278\_90_pmux for cells of type $pmux.
+Using template $paramod$2653f68ddb8eab7b1907b4a20767b72a824a7a36\_90_alu for cells of type $alu.
+Using template $paramod$constmap:66d421c313e4e958be776b99540ac2de3b59fdbc$paramod$77562a466236eb4a6d905351a0995599b75075cb\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$645fe0cc96ae5edb83bff90cc2c78f4a20ca3e3c\_90_pmux for cells of type $pmux.
+Using template $paramod$b098bc6f249c0ac91c4d6e19d54b23c285914115\_90_pmux for cells of type $pmux.
+Using template $paramod$cc1e387d9d5ac1d3f6e6bed180038d9c0ac48d0c\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$bf2533632d512eac76dd186c0da49367e29b8e98\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdff.
+Using template $paramod$eaeb96106163dbf82031649d189817109fe07c69\_90_pmux for cells of type $pmux.
+Using template $paramod$104d3d1e82b09b030a785dad8a5e608a6d4401f7\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$0ae36a7056fbae1b1191049d3533163e46c0843a\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3907 debug messages>
+
+3.22. Executing OPT pass (performing simple optimizations).
+
+3.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~1271 debug messages>
+
+3.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+<suppressed ~3042 debug messages>
+Removed a total of 1014 cells.
+
+3.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 280 unused cells and 1871 unused wires.
+<suppressed ~281 debug messages>
+
+3.22.5. Finished fast OPT passes.
+
+3.23. Executing ABC pass (technology mapping using ABC).
+
+3.23.1. Extracting gate netlist of module `\silicon_core' to `<abc-temp-dir>/input.blif'..
+Replacing 2 occurrences of constant undef bits with constant zero bits
+Extracted 5684 gates and 7179 wires to a netlist network with 1492 inputs and 365 outputs.
+
+3.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      104
+ABC RESULTS:            ANDNOT cells:     1119
+ABC RESULTS:               MUX cells:     2739
+ABC RESULTS:              NAND cells:       59
+ABC RESULTS:               NOR cells:      181
+ABC RESULTS:               NOT cells:      303
+ABC RESULTS:                OR cells:      844
+ABC RESULTS:             ORNOT cells:      125
+ABC RESULTS:              XNOR cells:       59
+ABC RESULTS:               XOR cells:      259
+ABC RESULTS:        internal signals:     5322
+ABC RESULTS:           input signals:     1492
+ABC RESULTS:          output signals:      365
+Removing temp directory.
+
+3.24. Executing OPT pass (performing simple optimizations).
+
+3.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module silicon_core.
+<suppressed ~1030 debug messages>
+
+3.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\silicon_core'.
+Removed a total of 0 cells.
+
+3.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 10 unused cells and 2902 unused wires.
+<suppressed ~44 debug messages>
+
+3.24.5. Finished fast OPT passes.
+
+3.25. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `silicon_core'. Setting top module to silicon_core.
+
+3.25.1. Analyzing design hierarchy..
+Top module:  \silicon_core
+
+3.25.2. Analyzing design hierarchy..
+Top module:  \silicon_core
+Removed 0 unused modules.
+
+3.26. Printing statistics.
+
+=== silicon_core ===
+
+   Number of wires:               5638
+   Number of wire bits:           7671
+   Number of public wires:         111
+   Number of public wire bits:    2136
+   Number of ports:                 11
+   Number of port bits:            169
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7268
+     $_ANDNOT_                    1119
+     $_AND_                        104
+     $_DFFE_PP_                    992
+     $_DFF_P_                       10
+     $_MUX_                       2739
+     $_NAND_                        59
+     $_NOR_                        181
+     $_NOT_                        293
+     $_ORNOT_                      125
+     $_OR_                         844
+     $_SDFFE_PP0N_                 230
+     $_SDFFE_PP0P_                 244
+     $_SDFF_PP0_                    10
+     $_XNOR_                        59
+     $_XOR_                        259
+
+3.27. Executing CHECK pass (checking for obvious problems).
+Checking module silicon_core...
+Found and reported 0 problems.
+
+4. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+5. Executing ABC pass (technology mapping using ABC).
+
+5.1. Extracting gate netlist of module `\silicon_core' to `<abc-temp-dir>/input.blif'..
+Extracted 6012 gates and 7504 wires to a netlist network with 1492 inputs and 595 outputs.
+
+5.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     1234
+ABC RESULTS:               MUX cells:     1784
+ABC RESULTS:              NAND cells:     2298
+ABC RESULTS:               NOR cells:       83
+ABC RESULTS:               NOT cells:      396
+ABC RESULTS:                OR cells:      781
+ABC RESULTS:              XNOR cells:      116
+ABC RESULTS:               XOR cells:      119
+ABC RESULTS:        internal signals:     5417
+ABC RESULTS:           input signals:     1492
+ABC RESULTS:          output signals:      595
+Removing temp directory.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \silicon_core..
+Removed 0 unused cells and 7515 unused wires.
+<suppressed ~12 debug messages>
+
+7. Printing statistics.
+
+=== silicon_core ===
+
+   Number of wires:               6656
+   Number of wire bits:           8405
+   Number of public wires:         100
+   Number of public wire bits:    1841
+   Number of ports:                 11
+   Number of port bits:            169
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8297
+     $_AND_                       1234
+     $_DFFE_PP_                    992
+     $_DFF_P_                       10
+     $_MUX_                       1784
+     $_NAND_                      2298
+     $_NOR_                         83
+     $_NOT_                        396
+     $_OR_                         781
+     $_SDFFE_PP0P_                 474
+     $_SDFF_PP0_                    10
+     $_XNOR_                       116
+     $_XOR_                        119
+
+8. Executing LTP pass (find longest path).
+
+Longest topological path in silicon_core (length=76):
+    0: \memwb_rd [4]
+    1: $abc$20208$new_n2272 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20393)
+    2: $abc$20208$new_n2276 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20397)
+    3: $abc$20208$new_n2277 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20398)
+    4: $abc$20208$new_n2278 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20399)
+    5: $abc$20208$new_n2279 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20400)
+    6: $abc$20208$new_n2282 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20403)
+    7: $abc$20208$new_n2616 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20737)
+    8: $abc$20208$new_n2617 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20738)
+    9: $abc$20208$new_n2618 (via $abc$20208$auto$blifparse.cc:396:parse_blif$20739)
+   10: \ex_rs2 [1] (via $abc$20208$auto$blifparse.cc:396:parse_blif$20740)
+   11: $abc$20208$new_n3605 (via $abc$20208$auto$blifparse.cc:396:parse_blif$21726)
+   12: $abc$20208$new_n3611 (via $abc$20208$auto$blifparse.cc:396:parse_blif$21732)
+   13: $abc$20208$new_n3832 (via $abc$20208$auto$blifparse.cc:396:parse_blif$21953)
+   14: $abc$20208$new_n3876 (via $abc$20208$auto$blifparse.cc:396:parse_blif$21997)
+   15: $abc$20208$new_n3877 (via $abc$20208$auto$blifparse.cc:396:parse_blif$21998)
+   16: $abc$20208$new_n3924 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22045)
+   17: $abc$20208$new_n3971 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22092)
+   18: $abc$20208$new_n3972 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22093)
+   19: $abc$20208$new_n3974 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22095)
+   20: $abc$20208$new_n4015 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22136)
+   21: $abc$20208$new_n4016 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22137)
+   22: $abc$20208$new_n4058 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22179)
+   23: $abc$20208$new_n4060 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22181)
+   24: $abc$20208$new_n4112 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22233)
+   25: $abc$20208$new_n4114 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22235)
+   26: $abc$20208$new_n4133 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22254)
+   27: $abc$20208$new_n4135 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22256)
+   28: $abc$20208$new_n4164 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22285)
+   29: $abc$20208$new_n4213 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22334)
+   30: $abc$20208$new_n4214 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22335)
+   31: $abc$20208$new_n4215 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22336)
+   32: $abc$20208$new_n4236 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22357)
+   33: $abc$20208$new_n4278 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22399)
+   34: $abc$20208$new_n4279 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22400)
+   35: $abc$20208$new_n4280 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22401)
+   36: $abc$20208$new_n4311 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22432)
+   37: $abc$20208$new_n4344 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22465)
+   38: $abc$20208$new_n4345 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22466)
+   39: $abc$20208$new_n4346 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22467)
+   40: $abc$20208$new_n4356 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22477)
+   41: $abc$20208$new_n4357 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22478)
+   42: $abc$20208$new_n4393 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22514)
+   43: $abc$20208$new_n4395 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22516)
+   44: $abc$20208$new_n4421 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22542)
+   45: $abc$20208$new_n4451 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22572)
+   46: $abc$20208$new_n4452 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22573)
+   47: $abc$20208$new_n4453 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22574)
+   48: $abc$20208$new_n4483 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22604)
+   49: $abc$20208$new_n4513 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22634)
+   50: $abc$20208$new_n4514 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22635)
+   51: $abc$20208$new_n4515 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22636)
+   52: $abc$20208$new_n4568 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22689)
+   53: $abc$20208$new_n4575 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22696)
+   54: $abc$20208$new_n4576 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22697)
+   55: $abc$20208$new_n4577 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22698)
+   56: $abc$20208$new_n4607 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22728)
+   57: $abc$20208$new_n4608 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22729)
+   58: $abc$20208$new_n4638 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22759)
+   59: $abc$20208$new_n4639 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22760)
+   60: $abc$20208$new_n4671 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22792)
+   61: $abc$20208$new_n4703 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22824)
+   62: $abc$20208$new_n4704 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22825)
+   63: $abc$20208$new_n4705 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22826)
+   64: $abc$20208$new_n4733 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22854)
+   65: $abc$20208$new_n4765 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22886)
+   66: $abc$20208$new_n4766 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22887)
+   67: $abc$20208$new_n4767 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22888)
+   68: $abc$20208$new_n4796 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22917)
+   69: $abc$20208$new_n4853 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22974)
+   70: $abc$20208$new_n4854 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22975)
+   71: $abc$20208$new_n4855 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22976)
+   72: $abc$20208$new_n4863 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22984)
+   73: $abc$20208$new_n4864 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22985)
+   74: $abc$20208$new_n4865 (via $abc$20208$auto$blifparse.cc:396:parse_blif$22986)
+   75: $abc$20208$new_n4887 (via $abc$20208$auto$blifparse.cc:396:parse_blif$23008)
+   76: \alu_y [31] (via $abc$20208$auto$blifparse.cc:396:parse_blif$23009)
+   ff: \dmem_addr [31] (via $auto$ff.cc:266:slice$8336)
+
+9. Executing JSON backend.
+
+10. Executing Verilog backend.
+Dumping module `\silicon_core'.
+
+End of script. Logfile hash: 61becb9a07, CPU: user 1.44s system 0.03s, MEM: 45.95 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 47% 2x abc (1 sec), 11% 23x opt_clean (0 sec), ...

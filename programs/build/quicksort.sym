@@ -1,0 +1,9 @@
+00000000 T _start
+00000028 t qsort_range
+00000128 T main
+00000158 D data
+00000198 B __bss_start
+00000198 B partitions
+0000019c B swaps
+000001a0 B __bss_end
+00010000 B __stack_top

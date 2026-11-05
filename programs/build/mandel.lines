@@ -1,0 +1,157 @@
+
+build/mandel.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+mandel.c:
+File name                        Line number    Starting address    View    Stmt
+mandel.c                                  10                0x28               x
+mandel.c                                  11                0x28       1       x
+mandel.c                                  12                0x28       2       x
+mandel.c                                  12                0x28       3       x
+mandel.c                                  12                0x28       4       x
+mandel.c                                  10                0x28       5
+mandel.c                                  24                0x68       6
+mandel.c                                  11                0x6c       7
+mandel.c                                  14                0x70       8
+mandel.c                                  17                0x74       9
+mandel.c                                  19                0x78      10
+mandel.c                                  13                0x7c      11       x
+mandel.c                                  15                0x7c      12
+mandel.c                                  15                0x84      13
+mandel.c                                  15                0x88      14
+mandel.c                                  15                0x8c      15
+mandel.c                                  14                0x98      16       x
+mandel.c                                  14                0x98      17
+mandel.c                                  14                0xa4      18
+mandel.c                                  15                0xa8      19       x
+mandel.c                                  16                0xa8      20       x
+mandel.c                                  17                0xa8      21       x
+mandel.c                                  17                0xa8      22       x
+mandel.c                                  18                0xa8      23       x
+mandel.c                                  19                0xa8      24       x
+mandel.c                                  18                0xa8      25
+mandel.c                                  18                0xac      26
+mandel.c                                  16                0xb0      27
+mandel.c                                  16                0xb4      28
+mandel.c                                  16                0xb8      29
+mandel.c                                  18                0xc0      30
+mandel.c                                  18                0xc8      31
+mandel.c                                  18                0xd4      32
+mandel.c                                  18                0xd8      33
+mandel.c                                  19                0xdc      34       x
+mandel.c                                  19                0xdc      35
+mandel.c                                  19                0xe0      36
+mandel.c                                  20                0xe4      37       x
+mandel.c                                  20                0xe4      38
+mandel.c                                  21                0xf4      39
+mandel.c                                  21                0xf8      40
+mandel.c                                  20                0xfc      41
+mandel.c                                  22               0x100      42
+mandel.c                                  18               0x104      43
+mandel.c                                  20               0x10c      44
+mandel.c                                  18               0x110      45       x
+mandel.c                                  21               0x110      46       x
+mandel.c                                  22               0x110      47       x
+mandel.c                                  17               0x110      48       x
+mandel.c                                  24               0x114      49       x
+mandel.c                                  24               0x114      50
+mandel.c                                  25               0x120      51       x
+mandel.c                                  24               0x120      52
+mandel.c                                  25               0x124      53
+mandel.c                                  13               0x128      54       x
+mandel.c                                  13               0x128      55       x
+mandel.c                                  27               0x13c      56       x
+mandel.c                                  12               0x13c      57
+mandel.c                                  27               0x140      58
+mandel.c                                  12               0x144      59
+mandel.c                                  27               0x14c      60
+mandel.c                                  12               0x150      61       x
+mandel.c                                  12               0x150      62       x
+mandel.c                                  30               0x164      63
+mandel.c                                  24               0x1a4      64       x
+mandel.c                                  25               0x1a4      65       x
+mandel.c                                  25               0x1a4      66
+mandel.c                                  25               0x1a4      67
+mandel.c                                  25               0x1a8      68
+mandel.c                                   -               0x1b8
+
+
+muldi3.S:
+File name                        Line number    Starting address    View    Stmt
+muldi3.S                                  37               0x1b8               x
+muldi3.S                                  38               0x1bc       1       x
+muldi3.S                                  40               0x1c0       2       x
+muldi3.S                                  41               0x1c4       3       x
+muldi3.S                                  42               0x1c8       4       x
+muldi3.S                                  44               0x1cc       5       x
+muldi3.S                                  45               0x1d0       6       x
+muldi3.S                                  46               0x1d4       7       x
+muldi3.S                                  47               0x1d8       8       x
+muldi3.S                                   -               0x1dc
+
+
+div.S:
+File name                        Line number    Starting address    View    Stmt
+div.S                                     69               0x1dc               x
+div.S                                     70               0x1e0       1       x
+div.S                                     74               0x1e4       2       x
+div.S                                     75               0x1e8       3       x
+div.S                                     76               0x1ec       4       x
+div.S                                     77               0x1f0       5       x
+div.S                                     78               0x1f4       6       x
+div.S                                     79               0x1f8       7       x
+div.S                                     81               0x1fc       8       x
+div.S                                     82               0x200       9       x
+div.S                                     83               0x204      10       x
+div.S                                     84               0x208      11       x
+div.S                                     86               0x20c      12       x
+div.S                                     88               0x210      13       x
+div.S                                     89               0x214      14       x
+div.S                                     90               0x218      15       x
+div.S                                     92               0x21c      16       x
+div.S                                     93               0x220      17       x
+div.S                                     94               0x224      18       x
+div.S                                     96               0x228      19       x
+div.S                                    102               0x22c      20       x
+div.S                                    103               0x230      21       x
+div.S                                    104               0x234      22       x
+div.S                                    105               0x238      23       x
+div.S                                    110               0x23c      24       x
+div.S                                    112               0x240      25       x
+div.S                                    114               0x244      26       x
+div.S                                    115               0x248      27       x
+div.S                                    117               0x24c      28       x
+div.S                                    119               0x250      29       x
+div.S                                    120               0x254      30       x
+div.S                                    121               0x258      31       x
+div.S                                    122               0x25c      32       x
+div.S                                    126               0x260      33       x
+div.S                                    127               0x264      34       x
+div.S                                    128               0x268      35       x
+div.S                                    130               0x26c      36       x
+div.S                                    131               0x270      37       x
+div.S                                    132               0x274      38       x
+div.S                                    134               0x278      39       x
+div.S                                    135               0x27c      40       x
+div.S                                    137               0x280      41       x
+div.S                                    138               0x284      42       x
+div.S                                    139               0x288      43       x
+div.S                                    140               0x28c      44       x
+div.S                                      -               0x290
+
+

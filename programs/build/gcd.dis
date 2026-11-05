@@ -1,0 +1,69 @@
+
+build/gcd.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	13800293          	li	t0,312
+   c:	13800313          	li	t1,312
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	0f000813          	li	a6,240
+  2c:	04880513          	addi	a0,a6,72
+  30:	0f000593          	li	a1,240
+  34:	0005a683          	lw	a3,0(a1)
+  38:	0045a783          	lw	a5,4(a1)
+  3c:	06068e63          	beqz	a3,b8 <main+0x90>
+  40:	08078663          	beqz	a5,cc <main+0xa4>
+  44:	00f6e733          	or	a4,a3,a5
+  48:	00177713          	andi	a4,a4,1
+  4c:	00000613          	li	a2,0
+  50:	08071863          	bnez	a4,e0 <main+0xb8>
+  54:	0016d693          	srli	a3,a3,0x1
+  58:	0017d793          	srli	a5,a5,0x1
+  5c:	00f6e733          	or	a4,a3,a5
+  60:	00177713          	andi	a4,a4,1
+  64:	00160613          	addi	a2,a2,1
+  68:	fe0706e3          	beqz	a4,54 <main+0x2c>
+  6c:	0016f713          	andi	a4,a3,1
+  70:	00071e63          	bnez	a4,8c <main+0x64>
+  74:	0016d693          	srli	a3,a3,0x1
+  78:	0016f713          	andi	a4,a3,1
+  7c:	fe070ce3          	beqz	a4,74 <main+0x4c>
+  80:	00c0006f          	j	8c <main+0x64>
+  84:	02d7e063          	bltu	a5,a3,a4 <main+0x7c>
+  88:	40d787b3          	sub	a5,a5,a3
+  8c:	00079663          	bnez	a5,98 <main+0x70>
+  90:	0240006f          	j	b4 <main+0x8c>
+  94:	0017d793          	srli	a5,a5,0x1
+  98:	0017f713          	andi	a4,a5,1
+  9c:	fe070ce3          	beqz	a4,94 <main+0x6c>
+  a0:	fe5ff06f          	j	84 <main+0x5c>
+  a4:	40f68733          	sub	a4,a3,a5
+  a8:	00078693          	mv	a3,a5
+  ac:	00070793          	mv	a5,a4
+  b0:	fe9ff06f          	j	98 <main+0x70>
+  b4:	00c697b3          	sll	a5,a3,a2
+  b8:	00f5a423          	sw	a5,8(a1)
+  bc:	00c58593          	addi	a1,a1,12
+  c0:	f6a59ae3          	bne	a1,a0,34 <main+0xc>
+  c4:	00882503          	lw	a0,8(a6)
+  c8:	00008067          	ret
+  cc:	00068793          	mv	a5,a3
+  d0:	00f5a423          	sw	a5,8(a1)
+  d4:	00c58593          	addi	a1,a1,12
+  d8:	f4a59ee3          	bne	a1,a0,34 <main+0xc>
+  dc:	fe9ff06f          	j	c4 <main+0x9c>
+  e0:	0016f713          	andi	a4,a3,1
+  e4:	fa071ae3          	bnez	a4,98 <main+0x70>
+  e8:	0016d693          	srli	a3,a3,0x1
+  ec:	f8dff06f          	j	78 <main+0x50>

@@ -1,0 +1,28 @@
+
+build/sum.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	addi	x5,x0,68
+   4:	addi	x6,x0,8
+   8:	addi	x10,x0,0
+
+0000000c <naive>:
+   c:	lw	x7,0(x5)
+  10:	add	x10,x10,x7
+  14:	addi	x5,x5,4
+  18:	addi	x6,x6,-1
+  1c:	bne	x6,x0,c <naive>
+  20:	addi	x5,x0,68
+  24:	addi	x6,x0,8
+  28:	addi	x11,x0,0
+
+0000002c <scheduled>:
+  2c:	lw	x7,0(x5)
+  30:	addi	x5,x5,4
+  34:	addi	x6,x6,-1
+  38:	add	x11,x11,x7
+  3c:	bne	x6,x0,2c <scheduled>
+  40:	ebreak

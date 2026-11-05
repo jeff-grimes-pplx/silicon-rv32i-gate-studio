@@ -1,0 +1,64 @@
+
+build/primes.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,220
+   c:	addi	x6,x0,1184
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x6,x0,220
+  2c:	addi	x10,x6,2
+  30:	addi	x16,x6,4
+  34:	addi	x13,x0,2
+  38:	addi	x11,x0,1
+  3c:	addi	x12,x0,560
+  40:	addi	x17,x0,281
+  44:	jal	x0,58 <main+0x30>
+  48:	addi	x13,x13,1
+  4c:	addi	x10,x10,1
+  50:	addi	x16,x16,2
+  54:	beq	x13,x17,88 <main+0x60>
+  58:	lbu	x15,0(x10)
+  5c:	bne	x15,x0,48 <main+0x20>
+  60:	slli	x14,x13,0x1
+  64:	addi	x15,x16,0
+  68:	sb	x11,0(x15)
+  6c:	add	x14,x14,x13
+  70:	add	x15,x15,x13
+  74:	bge	x12,x14,68 <main+0x40>
+  78:	addi	x13,x13,1
+  7c:	addi	x10,x10,1
+  80:	addi	x16,x16,2
+  84:	bne	x13,x17,58 <main+0x30>
+  88:	addi	x10,x0,2
+  8c:	sub	x10,x10,x6
+  90:	addi	x16,x6,558
+  94:	addi	x15,x6,0
+  98:	addi	x13,x0,0
+  9c:	addi	x17,x0,100
+  a0:	lbu	x12,2(x15)
+  a4:	slli	x14,x13,0x2
+  a8:	add	x11,x10,x15
+  ac:	add	x14,x6,x14
+  b0:	bne	x12,x0,d0 <main+0xa8>
+  b4:	sw	x11,564(x14)
+  b8:	addi	x13,x13,1
+  bc:	beq	x15,x16,c8 <main+0xa0>
+  c0:	addi	x15,x15,1
+  c4:	bne	x13,x17,a0 <main+0x78>
+  c8:	lw	x10,960(x6)
+  cc:	jalr	x0,0(x1)
+  d0:	beq	x15,x16,c8 <main+0xa0>
+  d4:	addi	x15,x15,1
+  d8:	jal	x0,a0 <main+0x78>

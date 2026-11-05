@@ -1,0 +1,34 @@
+
+build/fib.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	06400293          	li	t0,100
+   c:	0e400313          	li	t1,228
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	06400513          	li	a0,100
+  2c:	00100793          	li	a5,1
+  30:	00052023          	sw	zero,0(a0)
+  34:	00f52223          	sw	a5,4(a0)
+  38:	00850713          	addi	a4,a0,8
+  3c:	08050593          	addi	a1,a0,128
+  40:	00000693          	li	a3,0
+  44:	00078613          	mv	a2,a5
+  48:	00d787b3          	add	a5,a5,a3
+  4c:	00f72023          	sw	a5,0(a4)
+  50:	00470713          	addi	a4,a4,4
+  54:	00060693          	mv	a3,a2
+  58:	feb716e3          	bne	a4,a1,44 <main+0x1c>
+  5c:	07852503          	lw	a0,120(a0)
+  60:	00008067          	ret

@@ -1,0 +1,30 @@
+
+build/hazards.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+hazards.S:
+File name                        Line number    Starting address    View    Stmt
+hazards.S                                  6                   0               x
+hazards.S                                  7                 0x4       1       x
+hazards.S                                  8                 0x8       2       x
+hazards.S                                  9                 0xc       3       x
+hazards.S                                 10                0x10       4       x
+hazards.S                                 11                0x14       5       x
+hazards.S                                 12                0x18       6       x
+hazards.S                                 13                0x1c       7       x
+hazards.S                                 14                0x20       8       x
+hazards.S                                 15                0x24       9       x
+hazards.S                                 16                0x28      10       x
+hazards.S                                 17                0x2c      11       x
+hazards.S                                 18                0x30      12       x
+hazards.S                                 19                0x34      13       x
+hazards.S                                 20                0x38      14       x
+hazards.S                                 21                0x3c      15       x
+hazards.S                                 23                0x40      16       x
+hazards.S                                 24                0x48      17       x
+hazards.S                                 26                0x4c      18       x
+hazards.S                                 27                0x50      19       x
+hazards.S                                  -                0x54
+
+

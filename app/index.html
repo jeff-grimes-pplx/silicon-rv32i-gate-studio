@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Silicon: an original pipelined RV32I processor, its Yosys gate-level netlist, and a cycle-accurate browser simulator." />
+  <title>Silicon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141416'/%3E%3Crect x='8' y='8' width='16' height='16' rx='2' fill='none' stroke='%23f2b544' stroke-width='2'/%3E%3Cpath d='M4 12h4M4 20h4M24 12h4M24 20h4M12 4v4M20 4v4M12 24v4M20 24v4' stroke='%23f2b544' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-name">Silicon</span>
+        <span class="brand-sub">RV32I · 5-stage in-order pipeline · Yosys gate-level netlist</span>
+      </div>
+      <nav class="views" role="tablist" aria-label="Views">
+        <button class="view-tab" data-view="program" role="tab">Program</button>
+        <button class="view-tab is-active" data-view="pipeline" role="tab" aria-selected="true">Pipeline</button>
+        <button class="view-tab" data-view="split" role="tab" aria-selected="false">Split: Pipeline + Die</button>
+        <button class="view-tab" data-view="state" role="tab">State</button>
+        <button class="view-tab" data-view="netlist" role="tab">Netlist</button>
+        <button class="view-tab" data-view="docs" role="tab">Docs</button>
+      </nav>
+      <div class="topbar-right">
+        <label class="program-pick">
+          <span class="label">Program</span>
+          <select id="program-select" aria-label="Program"></select>
+        </label>
+      </div>
+    </header>
+
+    <main class="main" data-view="pipeline">
+      <aside class="side" id="side-program"></aside>
+      <section class="work">
+        <div class="work-pipeline" id="work-pipeline">
+          <div class="pipeline-wrap" id="pipeline"></div>
+          <div class="state-row" id="state-row">
+            <section class="panel" id="die-panel" hidden></section>
+            <section class="panel" id="regs-panel"></section>
+            <section class="panel" id="mem-panel"></section>
+            <section class="panel" id="events-panel"></section>
+          </div>
+        </div>
+        <div class="work-netlist" id="work-netlist" hidden></div>
+        <div class="work-docs" id="work-docs" hidden></div>
+      </section>
+      <footer class="transport" id="transport"></footer>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

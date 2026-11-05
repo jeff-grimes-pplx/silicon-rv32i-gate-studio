@@ -1,0 +1,20 @@
+
+build/multiply.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+multiply.S:
+File name                        Line number    Starting address    View    Stmt
+multiply.S                                 6                   0               x
+multiply.S                                 7                 0x4       1       x
+multiply.S                                 8                 0x8       2       x
+multiply.S                                10                 0xc       3       x
+multiply.S                                11                0x10       4       x
+multiply.S                                12                0x14       5       x
+multiply.S                                14                0x18       6       x
+multiply.S                                15                0x1c       7       x
+multiply.S                                16                0x20       8       x
+multiply.S                                17                0x24       9       x
+multiply.S                                 -                0x28
+
+

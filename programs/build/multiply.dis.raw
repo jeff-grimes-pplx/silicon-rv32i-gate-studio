@@ -1,0 +1,21 @@
+
+build/multiply.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	addi	x11,x0,123
+   4:	addi	x12,x0,456
+   8:	addi	x10,x0,0
+
+0000000c <mul_loop>:
+   c:	andi	x5,x12,1
+  10:	beq	x5,x0,18 <skip>
+  14:	add	x10,x10,x11
+
+00000018 <skip>:
+  18:	slli	x11,x11,0x1
+  1c:	srli	x12,x12,0x1
+  20:	bne	x12,x0,c <mul_loop>
+  24:	ebreak

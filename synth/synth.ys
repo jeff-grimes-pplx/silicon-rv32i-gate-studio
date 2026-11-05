@@ -1,0 +1,13 @@
+# Silicon: generic-cell synthesis
+read_verilog -sv rtl/silicon_core.sv
+hierarchy -check -top silicon_core
+synth -top silicon_core -flatten
+# only plain, enable, and synchronous-reset flops (positive clock)
+dfflegalize -cell $_DFF_P_ 01 -cell $_DFFE_PP_ 01 -cell $_SDFF_PP?_ 01 -cell $_SDFFE_PP?P_ 01
+# generic two-input gates plus MUX2 (ABC technology-independent mapping)
+abc -g AND,NAND,OR,NOR,XOR,XNOR,MUX
+opt_clean -purge
+tee -o synth/stat.txt stat
+tee -o synth/ltp.txt ltp -noff
+write_json synth/silicon_netlist.json
+write_verilog -noattr -noexpr synth/silicon_gates.v

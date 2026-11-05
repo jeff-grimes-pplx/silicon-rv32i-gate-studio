@@ -1,0 +1,92 @@
+
+build/matmul.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,396
+   c:	addi	x6,x0,432
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,28 <main>
+  24:	ebreak
+
+00000028 <main>:
+  28:	addi	x2,x2,-48
+  2c:	sw	x26,0(x2)
+  30:	addi	x26,x0,324
+  34:	sw	x18,32(x2)
+  38:	sw	x22,16(x2)
+  3c:	sw	x23,12(x2)
+  40:	sw	x24,8(x2)
+  44:	sw	x1,44(x2)
+  48:	addi	x24,x0,396
+  4c:	sw	x8,40(x2)
+  50:	sw	x9,36(x2)
+  54:	sw	x19,28(x2)
+  58:	sw	x20,24(x2)
+  5c:	sw	x21,20(x2)
+  60:	sw	x25,4(x2)
+  64:	addi	x23,x26,36
+  68:	addi	x22,x26,48
+  6c:	addi	x18,x0,396
+  70:	lw	x21,0(x26)
+  74:	lw	x20,4(x26)
+  78:	lw	x19,8(x26)
+  7c:	addi	x8,x23,0
+  80:	addi	x25,x18,0
+  84:	lw	x11,0(x8)
+  88:	addi	x10,x21,0
+  8c:	addi	x8,x8,4
+  90:	jal	x1,120 <__mulsi3>
+  94:	lw	x11,8(x8)
+  98:	addi	x9,x10,0
+  9c:	addi	x10,x20,0
+  a0:	jal	x1,120 <__mulsi3>
+  a4:	lw	x11,20(x8)
+  a8:	addi	x15,x10,0
+  ac:	addi	x10,x19,0
+  b0:	add	x9,x9,x15
+  b4:	jal	x1,120 <__mulsi3>
+  b8:	add	x10,x10,x9
+  bc:	sw	x10,0(x25)
+  c0:	addi	x25,x25,4
+  c4:	bne	x22,x8,84 <main+0x5c>
+  c8:	addi	x26,x26,12
+  cc:	addi	x18,x18,12
+  d0:	bne	x26,x23,70 <main+0x48>
+  d4:	lw	x15,0(x24)
+  d8:	lw	x14,16(x24)
+  dc:	lw	x10,32(x24)
+  e0:	lw	x1,44(x2)
+  e4:	lw	x8,40(x2)
+  e8:	add	x15,x15,x14
+  ec:	lw	x9,36(x2)
+  f0:	lw	x18,32(x2)
+  f4:	lw	x19,28(x2)
+  f8:	lw	x20,24(x2)
+  fc:	lw	x21,20(x2)
+ 100:	lw	x22,16(x2)
+ 104:	lw	x23,12(x2)
+ 108:	lw	x24,8(x2)
+ 10c:	lw	x25,4(x2)
+ 110:	lw	x26,0(x2)
+ 114:	add	x10,x15,x10
+ 118:	addi	x2,x2,48
+ 11c:	jalr	x0,0(x1)
+
+00000120 <__mulsi3>:
+ 120:	addi	x12,x10,0
+ 124:	addi	x10,x0,0
+ 128:	andi	x13,x11,1
+ 12c:	beq	x13,x0,134 <__mulsi3+0x14>
+ 130:	add	x10,x10,x12
+ 134:	srli	x11,x11,0x1
+ 138:	slli	x12,x12,0x1
+ 13c:	bne	x11,x0,128 <__mulsi3+0x8>
+ 140:	jalr	x0,0(x1)

@@ -1,0 +1,39 @@
+
+build/crc32.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010117          	auipc	sp,0x10
+   4:	00010113          	mv	sp,sp
+   8:	09c00293          	li	t0,156
+   c:	0a000313          	li	t1,160
+  10:	0062f863          	bgeu	t0,t1,20 <_start+0x20>
+  14:	0002a023          	sw	zero,0(t0)
+  18:	00428293          	addi	t0,t0,4
+  1c:	ff5ff06f          	j	10 <_start+0x10>
+  20:	008000ef          	jal	28 <main>
+  24:	00100073          	ebreak
+
+00000028 <main>:
+  28:	edb88637          	lui	a2,0xedb88
+  2c:	07800593          	li	a1,120
+  30:	32060613          	addi	a2,a2,800 # edb88320 <__stack_top+0xedb78320>
+  34:	fff00713          	li	a4,-1
+  38:	05300793          	li	a5,83
+  3c:	00f74733          	xor	a4,a4,a5
+  40:	00800693          	li	a3,8
+  44:	00177793          	andi	a5,a4,1
+  48:	40f007b3          	neg	a5,a5
+  4c:	00c7f7b3          	and	a5,a5,a2
+  50:	00175713          	srli	a4,a4,0x1
+  54:	fff68693          	addi	a3,a3,-1
+  58:	00f74733          	xor	a4,a4,a5
+  5c:	fe0694e3          	bnez	a3,44 <main+0x1c>
+  60:	0015c783          	lbu	a5,1(a1)
+  64:	00158593          	addi	a1,a1,1
+  68:	fc079ae3          	bnez	a5,3c <main+0x14>
+  6c:	fff74513          	not	a0,a4
+  70:	08a02e23          	sw	a0,156(zero) # 9c <checksum>
+  74:	00008067          	ret

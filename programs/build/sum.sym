@@ -1,0 +1,7 @@
+00000000 T _start
+0000000c t naive
+0000002c t scheduled
+00000044 d data
+00000064 B __bss_end
+00000064 B __bss_start
+00010000 B __stack_top

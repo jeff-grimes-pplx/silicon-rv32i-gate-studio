@@ -1,0 +1,42 @@
+
+build/fib.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+fib.c:
+File name                        Line number    Starting address    View    Stmt
+fib.c                                      4                0x28               x
+fib.c                                      5                0x28       1       x
+fib.c                                      5                0x28       2
+fib.c                                      5                0x2c       3
+fib.c                                      5                0x30       4
+fib.c                                      5                0x34       5       x
+fib.c                                      5                0x34       6
+fib.c                                      6                0x38       7       x
+fib.c                                      6                0x38       8       x
+fib.c                                      6                0x38       9       x
+fib.c                                      5                0x40      10
+fib.c                                      6                0x44      11       x
+fib.c                                      6                0x48      12
+fib.c                                      6                0x4c      13
+fib.c                                      6                0x50      14       x
+fib.c                                      6                0x50      15       x
+fib.c                                      7                0x5c      16       x
+fib.c                                      8                0x5c      17
+fib.c                                      -                0x64
+
+

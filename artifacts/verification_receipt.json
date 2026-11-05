@@ -1,0 +1,96 @@
+{
+  "design": "Silicon RV32I 5-Stage In-Order Pipelined Processor",
+  "rtl_files": [
+    "rtl/silicon_core.sv",
+    "rtl/rv32i_core.v"
+  ],
+  "synthesized_netlist": "synth/silicon_gates.v",
+  "yosys_version": "Yosys 0.52 (git sha1 46769d331)",
+  "total_cells": 8297,
+  "sequential_flops": 1486,
+  "combinational_gates": 6811,
+  "cells_by_type": {
+    "NAND": 2298,
+    "MUX": 1784,
+    "AND": 1234,
+    "DFFE_PP": 992,
+    "OR": 781,
+    "SDFFE_PP0P": 474,
+    "NOT": 396,
+    "XOR": 119,
+    "XNOR": 116,
+    "NOR": 83,
+    "SDFF_PP0": 10,
+    "DFF_P": 10
+  },
+  "longest_combinational_path_levels": 76,
+  "critical_path_start": "exmem_rd[1]",
+  "critical_path_end": "dmem_addr[31]",
+  "die_layout": {
+    "svg_path": "artifacts/silicon_die_8297.svg",
+    "svg_bytes": 791665,
+    "gds_path": "artifacts/silicon_die_8297.gds",
+    "gds_bytes": 532180,
+    "bounds_um": [
+      133.0,
+      112.0
+    ]
+  },
+  "lockstep_verification": {
+    "simulators": [
+      "Verilator 5.032 (RTL C++ model + 8,297-cell Gate-Level C++ model)",
+      "Icarus Verilog 12.0 (tb_iverilog_lockstep.v: rv32i_core RTL + silicon_core 8,297-gate netlist in lockstep)",
+      "Browser ES Module Cycle-Accurate Twin (SiliconCore + GateSim 8,297-cell topological evaluator)"
+    ],
+    "benchmarks_verified": [
+      {
+        "program": "primes.c",
+        "cycles": 16700,
+        "instret": 11451,
+        "cpi": 1.4584,
+        "a0_hex": "0x0000021d",
+        "a0_dec": 541,
+        "port_mismatches": 0,
+        "vcd": "artifacts/primes_lockstep.vcd"
+      },
+      {
+        "program": "quicksort.c",
+        "cycles": 1021,
+        "instret": 817,
+        "cpi": 1.2497,
+        "a0_hex": "0x000002f8",
+        "a0_dec": 760,
+        "port_mismatches": 0,
+        "vcd": "artifacts/quicksort_lockstep.vcd"
+      },
+      {
+        "program": "fibonacci_matrix.c",
+        "cycles": 2340,
+        "instret": 1624,
+        "cpi": 1.4409,
+        "a0_hex": "0x000cb228",
+        "a0_dec": 832040,
+        "port_mismatches": 0
+      },
+      {
+        "program": "crc32.c",
+        "cycles": 2570,
+        "instret": 2032,
+        "cpi": 1.2648,
+        "a0_hex": "0x57ef2b5d",
+        "a0_dec": 1475291997,
+        "port_mismatches": 0
+      },
+      {
+        "program": "hazards.S",
+        "cycles": 23,
+        "instret": 16,
+        "cpi": 1.4375,
+        "a0_hex": "0x00000067",
+        "a0_dec": 103,
+        "port_mismatches": 0,
+        "vcd": "artifacts/hazards_lockstep.vcd"
+      }
+    ]
+  }
+}

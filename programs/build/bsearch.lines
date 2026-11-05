@@ -1,0 +1,65 @@
+
+build/bsearch.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+bsearch.c:
+File name                        Line number    Starting address    View    Stmt
+bsearch.c                                 10                0x28               x
+bsearch.c                                 11                0x28       1       x
+bsearch.c                                 11                0x28       2       x
+bsearch.c                                 11                0x28       3       x
+bsearch.c                                 13                0x40       4       x
+bsearch.c                                 12                0x40       5
+bsearch.c                                 16                0x44       6
+bsearch.c                                 12                0x50       7
+bsearch.c                                 12                0x54       8
+bsearch.c                                 17                0x5c       9
+bsearch.c                                 13                0x60      10       x
+bsearch.c                                 14                0x60      11
+bsearch.c                                 14                0x64      12
+bsearch.c                                 16                0x68      13
+bsearch.c                                 13                0x70      14
+bsearch.c                                 16                0x74      15
+bsearch.c                                 14                0x78      16       x
+bsearch.c                                 17                0x78      17       x
+bsearch.c                                 17                0x78      18       x
+bsearch.c                                 14                0x78      19
+bsearch.c                                 15                0x7c      20       x
+bsearch.c                                 15                0x7c      21
+bsearch.c                                 16                0x80      22       x
+bsearch.c                                 17                0x80      23       x
+bsearch.c                                 16                0x80      24
+bsearch.c                                 17                0x84      25
+bsearch.c                                 17                0x88      26
+bsearch.c                                 13                0x8c      27       x
+bsearch.c                                 14                0x8c      28
+bsearch.c                                 14                0x90      29
+bsearch.c                                 16                0x94      30
+bsearch.c                                 13                0x9c      31
+bsearch.c                                 12                0xa0      32
+bsearch.c                                 19                0xa4      33       x
+bsearch.c                                 19                0xa4      34
+bsearch.c                                 19                0xa8      35       x
+bsearch.c                                 19                0xa8      36
+bsearch.c                                 11                0xac      37       x
+bsearch.c                                 11                0xac      38       x
+bsearch.c                                 21                0xbc      39       x
+bsearch.c                                 22                0xbc      40
+bsearch.c                                  -                0xc4
+
+

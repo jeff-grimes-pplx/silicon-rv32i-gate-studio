@@ -1,0 +1,28 @@
+
+7. Printing statistics.
+
+=== silicon_core ===
+
+   Number of wires:               6656
+   Number of wire bits:           8405
+   Number of public wires:         100
+   Number of public wire bits:    1841
+   Number of ports:                 11
+   Number of port bits:            169
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8297
+     $_AND_                       1234
+     $_DFFE_PP_                    992
+     $_DFF_P_                       10
+     $_MUX_                       1784
+     $_NAND_                      2298
+     $_NOR_                         83
+     $_NOT_                        396
+     $_OR_                         781
+     $_SDFFE_PP0P_                 474
+     $_SDFF_PP0_                    10
+     $_XNOR_                       116
+     $_XOR_                        119
+

@@ -1,0 +1,9 @@
+00000000 T _start
+00000028 T main
+00000120 T __mulsi3
+00000144 D A
+00000168 D B
+0000018c B C
+0000018c B __bss_start
+000001b0 B __bss_end
+00010000 B __stack_top

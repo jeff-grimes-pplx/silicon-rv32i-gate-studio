@@ -1,0 +1,67 @@
+
+build/collatz.elf:     file format elf32-littleriscv
+
+Contents of the .debug_line section:
+
+crt0.S:
+File name                        Line number    Starting address    View    Stmt
+crt0.S                                     6                   0               x
+crt0.S                                     7                 0x8       1       x
+crt0.S                                     8                 0xc       2       x
+crt0.S                                     9                0x10       3       x
+crt0.S                                    10                0x14       4       x
+crt0.S                                    11                0x18       5       x
+crt0.S                                    12                0x1c       6       x
+crt0.S                                    13                0x20       7       x
+crt0.S                                    14                0x24       8       x
+crt0.S                                     -                0x28
+
+
+collatz.c:
+File name                        Line number    Starting address    View    Stmt
+collatz.c                                  6                0x28               x
+collatz.c                                  7                0x28       1       x
+collatz.c                                  7                0x28       2       x
+collatz.c                                  7                0x28       3       x
+collatz.c                                  9                0x30       4       x
+collatz.c                                 10                0x30       5       x
+collatz.c                                 10                0x30       6
+collatz.c                                 11                0x34       7       x
+collatz.c                                  7                0x34       8       x
+collatz.c                                  7                0x34       9       x
+collatz.c                                  7                0x34      10
+collatz.c                                  7                0x38      11
+collatz.c                                  9                0x40      12
+collatz.c                                  7                0x44      13
+collatz.c                                  9                0x48      14       x
+collatz.c                                  8                0x48      15
+collatz.c                                  8                0x4c      16
+collatz.c                                  9                0x50      17       x
+collatz.c                                  9                0x50      18
+collatz.c                                  9                0x54      19
+collatz.c                                  9                0x58      20
+collatz.c                                  9                0x5c      21
+collatz.c                                  9                0x60      22
+collatz.c                                  9                0x64      23       x
+collatz.c                                  9                0x64      24
+collatz.c                                  9                0x68      25       x
+collatz.c                                  9                0x68      26       x
+collatz.c                                  9                0x68      27
+collatz.c                                  9                0x6c      28       x
+collatz.c                                  9                0x6c      29
+collatz.c                                  9                0x70      30       x
+collatz.c                                 10                0x74      31       x
+collatz.c                                 10                0x74      32
+collatz.c                                 11                0x78      33       x
+collatz.c                                 11                0x78      34
+collatz.c                                 11                0x7c      35
+collatz.c                                 11                0x80      36
+collatz.c                                  7                0x88      37       x
+collatz.c                                  7                0x8c      38       x
+collatz.c                                 13                0x94      39
+collatz.c                                 13                0xa0      40       x
+collatz.c                                 14                0xa0      41
+collatz.c                                 13                0xa4      42
+collatz.c                                  -                0xac
+
+

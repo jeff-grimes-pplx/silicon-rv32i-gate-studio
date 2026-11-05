@@ -1,0 +1,8 @@
+00000000 T _start
+00000028 T main
+000000ac B __bss_start
+000000ac B steps
+0000023c B best_steps
+00000240 B best_start
+00000244 B __bss_end
+00010000 B __stack_top

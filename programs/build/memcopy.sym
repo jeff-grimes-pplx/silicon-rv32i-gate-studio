@@ -1,0 +1,9 @@
+00000000 T _start
+0000000c t bytes
+00000030 t words
+00000050 d src
+00000060 d dst_bytes
+00000070 d dst_words
+00000080 B __bss_end
+00000080 B __bss_start
+00010000 B __stack_top

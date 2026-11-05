@@ -1,0 +1,7 @@
+00000000 T _start
+00000028 T main
+000000dc B __bss_start
+000000dc b composite
+00000310 B primes
+000004a0 B __bss_end
+00010000 B __stack_top

@@ -1,0 +1,2 @@
+fuzz: 40/40 random programs byte-identical to GNU (seed 1)
+exit 0

@@ -1,0 +1,9 @@
+00000000 T _start
+00000028 T main
+000000c4 R keys
+000000d4 R table
+00000154 B __bss_start
+00000154 B found
+00000164 B probes
+00000174 B __bss_end
+00010000 B __stack_top

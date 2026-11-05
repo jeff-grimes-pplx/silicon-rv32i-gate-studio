@@ -1,0 +1,12 @@
+node_modules/
+app/node_modules/
+app/dist/
+obj_dir/
+obj_gate/
+artifacts/*.vcd
+artifacts/lockstep_sim
+artifacts/qa_screenshots/
+programs/build/*.trace
+film/
+qa/
+.DS_Store

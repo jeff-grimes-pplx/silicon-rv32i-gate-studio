@@ -1,0 +1,44 @@
+OK   source branches.S: 28 bytes (gnu 28)
+OK   source calls.S: 152 bytes (gnu 152)
+OK   source hazards.S: 92 bytes (gnu 92)
+OK   source memcopy.S: 128 bytes (gnu 128)
+OK   source multiply.S: 40 bytes (gnu 40)
+OK   source smoke.S: 68 bytes (gnu 68)
+OK   source sum.S: 100 bytes (gnu 100)
+OK   objdump round-trip branches: 7 instructions, 0 mismatches
+OK   disassembler round-trip branches: 0 mismatches
+OK   objdump round-trip bsearch: 49 instructions, 0 mismatches
+OK   disassembler round-trip bsearch: 0 mismatches
+OK   objdump round-trip bubble: 25 instructions, 0 mismatches
+OK   disassembler round-trip bubble: 0 mismatches
+OK   objdump round-trip calls: 22 instructions, 0 mismatches
+OK   disassembler round-trip calls: 0 mismatches
+OK   objdump round-trip collatz: 43 instructions, 0 mismatches
+OK   disassembler round-trip collatz: 0 mismatches
+OK   objdump round-trip crc32: 30 instructions, 0 mismatches
+OK   disassembler round-trip crc32: 0 mismatches
+OK   objdump round-trip fib: 25 instructions, 0 mismatches
+OK   disassembler round-trip fib: 0 mismatches
+OK   objdump round-trip gcd: 60 instructions, 0 mismatches
+OK   disassembler round-trip gcd: 0 mismatches
+OK   objdump round-trip hazards: 21 instructions, 0 mismatches
+OK   disassembler round-trip hazards: 0 mismatches
+OK   objdump round-trip mandel: 164 instructions, 0 mismatches
+OK   disassembler round-trip mandel: 0 mismatches
+OK   objdump round-trip matmul: 81 instructions, 0 mismatches
+OK   disassembler round-trip matmul: 0 mismatches
+OK   objdump round-trip memcopy: 20 instructions, 0 mismatches
+OK   disassembler round-trip memcopy: 0 mismatches
+OK   objdump round-trip multiply: 10 instructions, 0 mismatches
+OK   disassembler round-trip multiply: 0 mismatches
+OK   objdump round-trip primes: 55 instructions, 0 mismatches
+OK   disassembler round-trip primes: 0 mismatches
+OK   objdump round-trip smoke: 16 instructions, 0 mismatches
+OK   disassembler round-trip smoke: 0 mismatches
+OK   objdump round-trip strrev: 35 instructions, 0 mismatches
+OK   disassembler round-trip strrev: 0 mismatches
+OK   objdump round-trip sum: 17 instructions, 0 mismatches
+OK   disassembler round-trip sum: 0 mismatches
+
+41/41 checks passed
+exit 0

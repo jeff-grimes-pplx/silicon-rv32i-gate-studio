@@ -1,0 +1,97 @@
+
+build/quicksort.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	auipc	x2,0x10
+   4:	addi	x2,x2,0 # 10000 <__stack_top>
+   8:	addi	x5,x0,408
+   c:	addi	x6,x0,416
+  10:	bgeu	x5,x6,20 <_start+0x20>
+  14:	sw	x0,0(x5)
+  18:	addi	x5,x5,4
+  1c:	jal	x0,10 <_start+0x10>
+  20:	jal	x1,128 <main>
+  24:	ebreak
+
+00000028 <qsort_range>:
+  28:	bge	x10,x11,124 <qsort_range+0xfc>
+  2c:	addi	x2,x2,-32
+  30:	sw	x18,16(x2)
+  34:	sw	x9,20(x2)
+  38:	addi	x18,x0,344
+  3c:	slli	x9,x11,0x2
+  40:	sw	x19,12(x2)
+  44:	sw	x20,8(x2)
+  48:	sw	x21,4(x2)
+  4c:	sw	x1,28(x2)
+  50:	sw	x8,24(x2)
+  54:	addi	x19,x11,0
+  58:	add	x9,x18,x9
+  5c:	lw	x15,408(x0) # 198 <partitions>
+  60:	lw	x16,0(x9)
+  64:	lw	x11,412(x0) # 19c <swaps>
+  68:	addi	x15,x15,1
+  6c:	sw	x15,408(x0) # 198 <partitions>
+  70:	bge	x10,x19,118 <qsort_range+0xf0>
+  74:	slli	x15,x10,0x2
+  78:	add	x15,x18,x15
+  7c:	addi	x12,x11,0
+  80:	addi	x8,x10,0
+  84:	addi	x17,x0,0
+  88:	lw	x13,0(x15)
+  8c:	slli	x14,x8,0x2
+  90:	add	x14,x18,x14
+  94:	bgeu	x13,x16,b0 <qsort_range+0x88>
+  98:	lw	x17,0(x14)
+  9c:	sw	x13,0(x14)
+  a0:	addi	x12,x12,1
+  a4:	sw	x17,0(x15)
+  a8:	addi	x8,x8,1
+  ac:	addi	x17,x0,1
+  b0:	addi	x15,x15,4
+  b4:	bne	x9,x15,88 <qsort_range+0x60>
+  b8:	beq	x17,x0,110 <qsort_range+0xe8>
+  bc:	lw	x16,0(x9)
+  c0:	slli	x15,x8,0x2
+  c4:	add	x15,x18,x15
+  c8:	lw	x14,0(x15)
+  cc:	addi	x12,x12,1
+  d0:	sw	x16,0(x15)
+  d4:	addi	x11,x8,-1
+  d8:	sw	x12,412(x0) # 19c <swaps>
+  dc:	sw	x14,0(x9)
+  e0:	jal	x1,28 <qsort_range>
+  e4:	addi	x10,x8,1
+  e8:	blt	x10,x19,5c <qsort_range+0x34>
+  ec:	lw	x1,28(x2)
+  f0:	lw	x8,24(x2)
+  f4:	lw	x9,20(x2)
+  f8:	lw	x18,16(x2)
+  fc:	lw	x19,12(x2)
+ 100:	lw	x20,8(x2)
+ 104:	lw	x21,4(x2)
+ 108:	addi	x2,x2,32
+ 10c:	jalr	x0,0(x1)
+ 110:	addi	x12,x11,0
+ 114:	jal	x0,bc <qsort_range+0x94>
+ 118:	addi	x12,x11,0
+ 11c:	addi	x8,x10,0
+ 120:	jal	x0,c0 <qsort_range+0x98>
+ 124:	jalr	x0,0(x1)
+
+00000128 <main>:
+ 128:	addi	x2,x2,-16
+ 12c:	addi	x10,x0,0
+ 130:	addi	x11,x0,15
+ 134:	sw	x1,12(x2)
+ 138:	jal	x1,28 <qsort_range>
+ 13c:	addi	x15,x0,344
+ 140:	lw	x10,28(x15)
+ 144:	lw	x1,12(x2)
+ 148:	lw	x15,32(x15)
+ 14c:	addi	x2,x2,16
+ 150:	add	x10,x10,x15
+ 154:	jalr	x0,0(x1)

@@ -1,0 +1,18 @@
+OK   primes 73 lines
+OK   fib 37 lines
+OK   gcd 102 lines
+OK   bubble 54 lines
+OK   crc32 52 lines
+OK   matmul 117 lines
+OK   strrev 57 lines
+OK   bsearch 104 lines
+OK   collatz 59 lines
+OK   mandel 202 lines
+OK   hazards 32 lines
+OK   branches 12 lines
+OK   sum 34 lines
+OK   multiply 16 lines
+OK   memcopy 43 lines
+OK   calls 46 lines
+toasm round-trip: all programs reassemble to the identical image
+exit 0
